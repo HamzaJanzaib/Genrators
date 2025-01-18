@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+html,
+body {
+    font-size: 10px;
+    color: black;
+}
+
+.display-contant {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 5rem;
+}
+
+.display-contant .left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.display-contant .right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.display-contant .right .text {
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.display-contant .right .text h1 {
+    font-size: 5rem;
+    position: relative;
+}
+
+.display-contant .right .text h1::after {
+    content: "!";
+    color: red;
+    font-size: 5rem;
+    position: absolute;
+}
+
+.display-contant .right .text p {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.display-contant .right .text a {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.display-contant .right .text a:hover {
+    background-color: white;
+    color: black;
+    border: 0.3rem solid black;
+}
+
+/* meadia quari 768px */
+@media screen and (max-width: 768px) {
+    .display-contant {
+        padding: 2rem;
+    }
+
+    .display-contant .left {
+        display: none;
+    }
+
+    .display-contant .right {
+        width: 100%;
+    }
+
+    .display-contant .right .text h1 {
+        font-size: 3rem;
+    }
+
+    .display-contant .right .text h1::after {
+        font-size: 3rem;
+    }
+
+    .display-contant .right .text p {
+        font-size: 1rem;
+    }
+
+    .display-contant .right .text a {
+        font-size: 1.5rem;
+    }
+
+}
+
+/* meadia quari 480px */
+@media screen and (max-width: 480px) {
+    .display-contant .right .text h1 {
+        font-size: 2rem;
+    }
+
+    .display-contant .right .text h1::after {
+        font-size: 2rem;
+    }
+
+    .display-contant .right .text p {
+        font-size: 1rem;
+    }
+
+    .display-contant .right .text a {
+        font-size: 1.5rem;
+    }
+
+}
+
+/* meadia quari 967px */
+@media screen and (max-width: 967px) {
+    .display-contant .left {
+        display: none;
+    }
+
+    .display-contant .right {
+        width: 100%;
+    }
+
+    .display-contant .right {
+        width: 100%;
+    }
+
+    .display-contant .right .text h1 {
+        font-size: 4rem;
+    }
+
+    .display-contant .right .text h1::after {
+        font-size: 3rem;
+    }
+
+    .display-contant .right .text p {
+        font-size: 2rem;
+    }
+
+    .display-contant .right .text a {
+        font-size: 1.5rem;
+    }
+
+}
+
+/* secound page */
+
+.nav-designs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.nav-designs img {
+    width: 10rem;
+    cursor: pointer;
+}
+
+.nav-designs h1 {
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.nav-designs .lef {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    overflow: hidden;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    outline: none;
+}
+
+.search-box i {
+    position: absolute;
+    right: 2%;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-designs {
+        padding: 2rem;
+    }
+
+    .nav-designs h1 {
+        display: none;
+    }
+
+    .search-box {
+        width: 20rem;
+    }
+
+    .search-box input {
+        padding: 1rem 1rem;
+        font-size: 1rem;
+    }
+
+    .search-box i {
+        padding: 1rem 1rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .nav-designs {
+        height: 10vh;
+    }
+
+    .nav-designs h1 {
+        font-size: 1rem;
+    }
+
+    .search-box {
+        width: 15rem;
+    }
+
+    .search-box input {
+        height: 2rem;
+        padding: 1rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .search-box img {
+        width: 0.6rem;
+    }
+
+    .search-box i {
+        display: flex;
+        padding: 1rem 0.5rem;
+        align-items: center;
+        height: 1rem;
+    }
+
+}
+
+.rules-box {
+    height: 5vh;
+    background-color: rgba(128, 128, 128, 0.253);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.rules-box a {
+    text-decoration: none;
+    color: black;
+    gap: 1rem;
+}
+
+.roules {
+    height: 83.3vh;
+    position: relative;
+}
+
+.roules-text {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+.roules-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.roules-text h1::after {
+    content: ":";
+    color: red;
+    font-size: 3rem;
+}
+
+.roules-text p {
+    font-size: 2rem;
+}
+
+.templates-box {
+    height: 83.3vh;
+    padding: 5rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    /* background-color: red; */
+}
+
+.box {
+    background-color: #f0f0f0;
+    padding: 1rem 5rem;
+}
+
+.box a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    margin: 2rem 3.5rem;
+}
+
+.box .box-img {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.box .box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
