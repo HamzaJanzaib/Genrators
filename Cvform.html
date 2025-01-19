@@ -44,8 +44,8 @@
                 </div><!-- first end-->
                 <div class="second"><!-- second end-->
                     <div class="img-group">
-                        <label for="Add Your Image">Add Your Image</label>
-                        <input type="file" id="Add Your Image" name="Add Your Image" required>
+                        <label for="image">Add Your Image</label>
+                        <input type="file" id="image" name="Add Your Image" required>
                     </div>
                 </div><!-- second end-->
             </div><!-- top-group end-->
@@ -70,8 +70,8 @@
                         <input type="text" id="City" name="City" required>
                     </div>
                     <div class="input-group">
-                        <label for="Country">Country</label>
-                        <input type="text" id="Country" name="Country" required>
+                        <label for="Cnic no">CNIC NO</label>
+                        <input type="number" id="Cnic no" name="Cnic no" required>
                     </div>
                 </div><!--middle-1 end-->
                 <div class="middle-2"><!--middle-2 start-->
@@ -98,11 +98,11 @@
             <section class="textarea"><!--textarea start-->
                 <h3>Objective</h3>
                 <div class="textarea">
-                    <textarea type="text" id="intermediate" rows="2" name="intermediate" required></textarea>
+                    <textarea type="text" id="Objective" rows="2" name="Objective" required></textarea>
                 </div>
                 <h3>Working Experience</h3>
                 <div class="textarea">
-                    <textarea type="text" id="Working Experience" rows="2" name="Working Experience"
+                    <textarea type="text" id="Working-Experience" rows="2" name="Working Experience"
                         required></textarea>
                 </div>
                 <h3>Activities</h3>
@@ -119,10 +119,11 @@
                 </div>
             </section><!--textarea end-->
             <div class="submit">
-                <button id="">submit</button>
+                <button id="submit" onclick="fatchdata()">submit</button>
             </div>
         </form><!-- form end-->
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

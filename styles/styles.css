@@ -11,6 +11,7 @@ html,
 body {
     font-size: 10px;
     color: black;
+    overflow-x: hidden;
 }
 
 .display-contant {
@@ -226,6 +227,21 @@ body {
     cursor: pointer;
 }
 
+.dowlond button {
+    color: WHITE;
+    height: 50px;
+    background-color: transparent;
+    width: 50px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 1rem;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .nav-designs {
         padding: 2rem;
@@ -335,14 +351,14 @@ body {
     padding: 5rem 5rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
-    /* background-color: red; */
 }
 
 .box {
     background-color: #f0f0f0;
     padding: 1rem 5rem;
+    border-radius: 20px;
 }
 
 .box a {
@@ -356,11 +372,75 @@ body {
     width: 80%;
     height: 80%;
     margin: auto;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
 }
 
 .box .box-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+}
 
+.box .box-img img:hover {
+    scale: 1.1;
+}
+
+.box button {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    display: flex;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 30px;
+    background-color: black;
+    margin-left: 14%;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .templates-box {
+        padding: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .box a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .templates-box {
+        padding: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    }
+
+    .box a {
+        font-size: 0.8rem;
+    }
+}
+
+.page {
+    color: black;
+    height: 100vh;
+    width: 40vw;
+    margin: 2rem auto;
+    border: 1px solid black;
+    box-shadow: 5px 5px 20px rgba(82, 29, 29, 0.1);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 90%;
+    background-color: red;
+    color: white;
 }
