@@ -417,7 +417,7 @@ body {
 @media screen and (max-width: 480px) {
     .templates-box {
         padding: 2rem;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(10, 1fr);
     }
 
