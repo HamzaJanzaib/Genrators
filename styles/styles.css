@@ -482,11 +482,23 @@ body {
 
 .heading {
     text-decoration: underline;
+    position: relative;
 }
 .heading::after{
     content: ':';
     color: red;
     margin-right: 5px;  
+}
+.heading::before{
+    content: "";
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    bottom: 12px;
+    left: -15px;
+    margin-left: 4px;
 }
 
 .Objective{
@@ -495,6 +507,7 @@ body {
     text-transform: capitalize;
     font-size: 1.5rem;
     padding: 20px 30px;
+    overflow: hidden;
 }
 .paragraph{
     font-size: 1.3rem;
@@ -518,6 +531,7 @@ body {
     text-transform: capitalize;
     font-size: 1.5rem;
     padding: 20px 30px;
+    overflow: hidden;
 }
 
 .Activities{
@@ -525,6 +539,7 @@ body {
     width: 100%;
     text-transform: capitalize;
     font-size: 1.5rem;
+    overflow: hidden;
     padding: 20px 30px;
 }
 .interest{
@@ -533,4 +548,5 @@ body {
     text-transform: capitalize;
     font-size: 1.5rem;
     padding: 20px 30px;
+    overflow: hidden;
 }
