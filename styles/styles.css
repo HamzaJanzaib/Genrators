@@ -484,12 +484,14 @@ body {
     text-decoration: underline;
     position: relative;
 }
-.heading::after{
+
+.heading::after {
     content: ':';
     color: red;
-    margin-right: 5px;  
+    margin-right: 5px;
 }
-.heading::before{
+
+.heading::before {
     content: "";
     height: 8px;
     width: 8px;
@@ -501,7 +503,7 @@ body {
     margin-left: 4px;
 }
 
-.Objective{
+.Objective {
     height: 15%;
     width: 100%;
     text-transform: capitalize;
@@ -509,13 +511,15 @@ body {
     padding: 20px 30px;
     overflow: hidden;
 }
-.paragraph{
+
+.paragraph {
     font-size: 1.3rem;
     font-weight: 200;
     margin-left: 20px;
     position: relative;
 }
-.paragraph::after{
+
+.paragraph::after {
     content: "";
     height: 4px;
     width: 4px;
@@ -525,7 +529,8 @@ body {
     bottom: 8px;
     margin-left: 4px;
 }
-.WorkingExperience{
+
+.WorkingExperience {
     height: 15%;
     width: 100%;
     text-transform: capitalize;
@@ -534,7 +539,7 @@ body {
     overflow: hidden;
 }
 
-.Activities{
+.Activities {
     height: 15%;
     width: 100%;
     text-transform: capitalize;
@@ -542,11 +547,43 @@ body {
     overflow: hidden;
     padding: 20px 30px;
 }
-.interest{
+
+.interest {
     height: 10%;
     width: 100%;
     text-transform: capitalize;
     font-size: 1.5rem;
     padding: 20px 30px;
     overflow: hidden;
+}
+
+@media only screen and (max-width:480px) {
+    .page {
+        width: 95%;
+    }
+
+    .topdiv {
+        height: 10%;
+        font-size: 2rem;
+    }
+
+    .details {
+        font-size: 1rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+        margin-bottom: 3px;
+    }
+    .personal{
+        font-size: 1rem;
+    }
+    .paragraph{
+        font-size: 1rem;
+        color: rgb(0, 0, 0);
+    }
+    .heading::before{
+        height: 6px;
+        width: 6px;
+    }
 }

@@ -89,14 +89,14 @@ function generateResume() {
     // Create Objective elements 
     let Objective = document.createElement('div');
     Objective.classList.add('Objective');
-    Objective.innerHTML = `<h1 class='heading'>Objective</h1><br>
+    Objective.innerHTML = `<h1 class='heading'>Objective</h1>
                             <p class='paragraph'>${data.Objective}</p>`;
     page.appendChild(Objective);
 
     // Create WorkingExperience elements 
     let WorkingExperience = document.createElement('div');
     WorkingExperience.classList.add('WorkingExperience');
-    WorkingExperience.innerHTML = `<h1 class='heading'>WorkingExperience</h1><br>
+    WorkingExperience.innerHTML = `<h1 class='heading'>WorkingExperience</h1>
                             <p class='paragraph'>${data.WorkingExperience}</p>`;
     page.appendChild(WorkingExperience);
 
@@ -104,7 +104,7 @@ function generateResume() {
     // Create Activities elements 
     let Activities = document.createElement('div');
     Activities.classList.add('Activities');
-    Activities.innerHTML = `<h1 class='heading'>Activities</h1><br>
+    Activities.innerHTML = `<h1 class='heading'>Activities</h1>
                             <p class='paragraph'>${data.Activities}</p>`;
     page.appendChild(Activities);
 
