@@ -445,8 +445,92 @@ body {
     background-color: red;
     color: white;
 }
+
 .topdiv {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.details {
+    height: 10%;
+    width: 100%;
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.dots::after {
+    content: ':';
+    color: red;
+    margin-right: 5px;
+}
+
+.personal {
     height: 20%;
     width: 100%;
+    padding: 20px 30px;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.heading {
+    text-decoration: underline;
+}
+.heading::after{
+    content: ':';
+    color: red;
+    margin-right: 5px;  
+}
+
+.Objective{
+    height: 15%;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    padding: 20px 30px;
+}
+.paragraph{
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-left: 20px;
+    position: relative;
+}
+.paragraph::after{
+    content: "";
+    height: 4px;
+    width: 4px;
+    position: absolute;
     background-color: red;
+    border-radius: 50%;
+    bottom: 8px;
+    margin-left: 4px;
+}
+.WorkingExperience{
+    height: 15%;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    padding: 20px 30px;
+}
+
+.Activities{
+    height: 15%;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    padding: 20px 30px;
+}
+.interest{
+    height: 10%;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    padding: 20px 30px;
 }

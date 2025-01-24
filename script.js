@@ -10,84 +10,118 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
 
         // Getting form values
-        let FirstName = document.getElementById('FirstName')?.value || "";
-        let LastName = document.getElementById('LastName')?.value || "";
-        let Feild = document.getElementById('Feild')?.value || "";
-        
-        // Fix for image input
-        let imageInput = document.getElementById('image');
-        let imageFile = imageInput?.files[0] ? URL.createObjectURL(imageInput.files[0]) : '';
-
-        let Email = document.getElementById('Email')?.value || "";
-        let PhoneNumber = document.getElementById('PhoneNumber')?.value || "";
-        let Address = document.getElementById('Address')?.value || "";
-        let City = document.getElementById('City')?.value || "";
-        let Cnicno = document.getElementById('Cnicno')?.value || "";
-        let Skills = document.getElementById('Skills')?.value || "";
-        let intermediate = document.getElementById('intermediate')?.value || "";
-        let Objective = document.getElementById('Objective')?.value || "";
-        let WorkingExperience = document.getElementById('Working-Experience')?.value || "";
-        let Activities = document.getElementById('Activities')?.value || "";
-        let Language = document.getElementById('Language')?.value || "";
-        let interest = document.getElementById('interest')?.value || "";
-
-        // Storing data in local storage
-        let data = {
-            FirstName,
-            LastName,
-            Feild,
-            imageFile,  
-            Email,
-            PhoneNumber,
-            Address,
-            City,
-            Cnicno,
-            Skills,
-            intermediate,
-            Objective,
-            WorkingExperience,
-            Activities,
-            Language,
-            interest
+        let formValues = {
+            FirstName: document.getElementById('FirstName')?.value || "",
+            LastName: document.getElementById('LastName')?.value || "",
+            Feild: document.getElementById('Feild')?.value || "",
+            Email: document.getElementById('Email')?.value || "",
+            PhoneNumber: document.getElementById('PhoneNumber')?.value || "",
+            Address: document.getElementById('Address')?.value || "",
+            City: document.getElementById('City')?.value || "",
+            Cnicno: document.getElementById('Cnicno')?.value || "",
+            Skills: document.getElementById('Skills')?.value || "",
+            intermediate: document.getElementById('intermediate')?.value || "",
+            Objective: document.getElementById('Objective')?.value || "",
+            WorkingExperience: document.getElementById('Working-Experience')?.value || "",
+            Activities: document.getElementById('Activities')?.value || "",
+            Language: document.getElementById('Language')?.value || "",
+            interest: document.getElementById('interest')?.value || ""
         };
 
-        window.localStorage.setItem('data', JSON.stringify(data));
+        // Fix for image input
+        let imageInput = document.getElementById('image');
+        formValues.imageFile = imageInput?.files[0] ? URL.createObjectURL(imageInput.files[0]) : '';
+
+        // Storing data in local storage
+        window.localStorage.setItem('data', JSON.stringify(formValues));
         console.log("Data saved to local storage");
 
-        // Delay before redirect
-        setTimeout(() => {
-            window.location.href = 'templates.html';
-        }, 300);
+        // Redirect immediately
+        window.location.href = 'templates.html'
     });
 });
-
-
 function simplecv() {
     window.location.href = 'resume.html';
-
-    setTimeout(() => {
-        document.addEventListener("DOMContentLoaded", function () {
-            let page = document.getElementById('page');
-            if (!page) {
-                console.error("Error: Element 'page' not found");
-                return;
-            }
-
-            let data = window.localStorage.getItem('data');
-            if (!data) {
-                console.error("Error: No data found in local storage.");
-                return;
-            }
-
-            data = JSON.parse(data);
-            console.log(data);
-
-            let topdiv = document.createElement('div');
-            topdiv.classList.add('topdiv');
-            topdiv.textContent = `${data.FirstName} ${data.LastName}`;
-            page.appendChild(topdiv);
-            console.log("Resume generated successfully.");
-        });
-    }, 50);
+    generateResume()
 }
 
+function generateResume() {
+    let page = document.getElementById('page');
+    if (!page) {
+        console.error("Error: Element 'page' not found");
+        return;
+    }
+
+    let data = window.localStorage.getItem('data');
+    if (!data) {
+        console.error("Error: No data found in local storage.");
+        return;
+    }
+
+    data = JSON.parse(data);
+    console.log(data);
+
+    // Create heading elements 
+    let topdiv = document.createElement('div');
+    topdiv.classList.add('topdiv');
+    topdiv.textContent = `curriculum vitae`;
+    page.appendChild(topdiv);
+
+    // Add more elements for other data fields (example)
+    let details = document.createElement('div');
+    details.classList.add('details');
+    details.innerHTML = ` <h4>1. <span class='dots'>first Name</span> ${data.FirstName}</h4>
+            <h4>2.<span class='dots'> last Name</span> ${data.LastName}</h4>
+            <h4>3. <span class='dots'>email</span> ${data.Email}</h4>
+          `
+    page.appendChild(details);
+
+    // Create personal elements 
+    let personal = document.createElement('div');
+    personal.classList.add('personal');
+    personal.innerHTML = `<h1 class='heading'>personal details</h1><br>
+        <h4>1.<span class='dots'> Address</span> ${data.Address}</h4>
+        <h4>2. <span class='dots'>City </span> ${data.City}</h4>
+        <h4>3.<span class='dots'> Cnic No</span>  ${data.Cnicno}</h4>
+        <h4>4.<span class='dots'> Feild</span>  ${data.Feild}</h4>`;
+    page.appendChild(personal);
+
+    // Create Objective elements 
+    let Objective = document.createElement('div');
+    Objective.classList.add('Objective');
+    Objective.innerHTML = `<h1 class='heading'>Objective</h1><br>
+                            <p class='paragraph'>${data.Objective}</p>`;
+    page.appendChild(Objective);
+
+    // Create WorkingExperience elements 
+    let WorkingExperience = document.createElement('div');
+    WorkingExperience.classList.add('WorkingExperience');
+    WorkingExperience.innerHTML = `<h1 class='heading'>WorkingExperience</h1><br>
+                            <p class='paragraph'>${data.WorkingExperience}</p>`;
+    page.appendChild(WorkingExperience);
+
+
+    // Create Activities elements 
+    let Activities = document.createElement('div');
+    Activities.classList.add('Activities');
+    Activities.innerHTML = `<h1 class='heading'>Activities</h1><br>
+                            <p class='paragraph'>${data.Activities}</p>`;
+    page.appendChild(Activities);
+
+
+    // Create interest elements 
+    let interest = document.createElement('div');
+    interest.classList.add('interest');
+    interest.innerHTML = `<h1 class='heading'>interest</h1>
+                            <p class='paragraph'>${data.interest}</p>`;
+    page.appendChild(interest);
+
+
+    // ... (Add similar elements for other fields) ...
+
+    console.log("Resume generated successfully.");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    generateResume();
+});
