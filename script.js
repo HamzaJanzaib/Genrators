@@ -125,3 +125,12 @@ function generateResume() {
 document.addEventListener("DOMContentLoaded", function () {
     generateResume();
 });
+
+function dowloand(){
+    html2canvas(document.querySelector("#page")).then(canvas => {
+        let link = document.createElement("a");
+        link.download = "your_cv.jpg";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+    });
+}
