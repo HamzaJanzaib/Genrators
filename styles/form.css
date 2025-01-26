@@ -159,6 +159,7 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 #submit:hover {
