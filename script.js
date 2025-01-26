@@ -1,3 +1,5 @@
+
+// form submit
 document.addEventListener("DOMContentLoaded", function () {
     let form = document.getElementById('form');
 
@@ -37,6 +39,42 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Data saved to local storage");
 
         // Redirect immediately
+        // Check for blank/empty values
+        let requiredFields = {
+            'First Name': formValues.FirstName,
+            'Last Name': formValues.LastName,
+            'Field': formValues.Feild,
+            'Email': formValues.Email,
+            'Phone Number': formValues.PhoneNumber,
+            'Address': formValues.Address,
+            'City': formValues.City,
+            'CNIC Number': formValues.Cnicno,
+            'Skills': formValues.Skills,
+            'Intermediate': formValues.intermediate,
+            'Objective': formValues.Objective,
+            'Working Experience': formValues.WorkingExperience,
+            'Activities': formValues.Activities,
+            'Language': formValues.Language,
+            'Interests': formValues.interest
+        };
+
+        let emptyFields = [];
+        for (let field in requiredFields) {
+            if (!requiredFields[field] || requiredFields[field].trim() === '') {
+                emptyFields.push(field);
+            }
+        }
+
+        if (emptyFields.length > 0) {
+            alert(`Please fill in the following required fields:\n${emptyFields.join(' / ')}`);
+            return;
+        }
+
+        if (!imageInput?.files[0]) {
+            alert('Please select a profile image');
+            return;
+        }
+
         window.location.href = 'templates.html'
     });
 });
@@ -124,8 +162,9 @@ function generateResume() {
     console.log("Resume generated successfully.");
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
-    brownresume();
+    imageresume();
 });
 
 
@@ -312,7 +351,7 @@ function thirddesign() {
     // ... (Add similar elements for other fields) ...
 
     console.log("Resume generated successfully.");
-   
+
 }
 
 function blue() {
@@ -367,7 +406,7 @@ function blueresume() {
     topdesign.classList.add('topdesign');
     topdesign.innerHTML = `<h1 class='cvname'>curriculum vitae</h1>`;
     left.appendChild(topdesign);
- // Create Objective elements 
+    // Create Objective elements 
     let Objective = document.createElement('div');
     Objective.classList.add('Objective');
     Objective.innerHTML = `<h1 class='heading'>Objective</h1>
@@ -409,12 +448,12 @@ function blueresume() {
     console.log("Resume generated successfully.");
 
 }
-function Brown(){
+function Brown() {
     window.location.href = 'resume.html';
     brownresume();
 }
 // brown resume design 2
-function brownresume(){
+function brownresume() {
     let page = document.getElementById('page');
     if (!page) {
         console.error("Error: Element 'page' not found");
@@ -460,7 +499,7 @@ function brownresume(){
     `;
     brown.appendChild(left);
 
-    let right = document.createElement('div'); 
+    let right = document.createElement('div');
     right.classList.add('brownright');
     right.innerHTML = ``;
     brown.appendChild(right);
@@ -510,9 +549,101 @@ function brownresume(){
 
     console.log("Resume generated successfully.");
 }
+function image() {
+    window.location.href = 'resume.html';
+    imageresume();
+}
 
+// image resume design 3
+function imageresume() {
+    let page = document.getElementById('page');
+    if (!page) {
+        console.error("Error: Element 'page' not found");
+        return;
+    }
+    let data = window.localStorage.getItem('data');
+    if (!data) {
+        console.error("Error: No data found in local storage.");
+        return;
+    }
+
+    data = JSON.parse(data);
+    console.log(data);
+
+    page.innerHTML = ""
+
+    let image = document.createElement('div');
+    image.classList.add('image-box');
+    image.innerHTML = `  `;
+    page.appendChild(image);
+
+    let top = document.createElement('div');
+    top.classList.add('image-top');
+    top.innerHTML = ` `;
+    image.appendChild(top);
+
+    let topleft = document.createElement('div');
+    topleft.classList.add('image-top-left');
+    topleft.innerHTML = `<img src="${data.imageFile}" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover;">`;
+    top.appendChild(topleft);
+
+    let topright = document.createElement('div');
+    topright.classList.add('image-top-right');
+    topright.innerHTML = `
+    <h4 class='image-top-right-h4'> ${data.FirstName} ${data.LastName}</h4>
+    `;
+    top.appendChild(topright);
+
+    // Create personal elements 
+    let personal = document.createElement('div');
+    personal.classList.add('personal');
+    personal.innerHTML = `<h1 class='heading'>personal details</h1><br>
+         <h4>1.<span class='dots'>Email </span> ${data.Email}</h4>
+         <h4>1.<span class='dots'> Address</span> ${data.Address}</h4>
+         <h4>2. <span class='dots'>City </span> ${data.City}</h4>
+         <h4>3.<span class='dots'> Cnic No</span>  ${data.Cnicno}</h4>
+         <h4>4.<span class='dots'> Feild</span>  ${data.Feild}</h4>`;
+    image.appendChild(personal);
+
+    // Create Objective elements 
+    let Objective = document.createElement('div');
+    Objective.classList.add('Objective');
+    Objective.innerHTML = `<h1 class='heading'>Objective</h1>
+                             <p class='paragraph'>${data.Objective}</p>`;
+    image.appendChild(Objective);
+
+    // Create WorkingExperience elements 
+    let WorkingExperience = document.createElement('div');
+    WorkingExperience.classList.add('WorkingExperience');
+    WorkingExperience.innerHTML = `<h1 class='heading'>WorkingExperience</h1>
+                             <p class='paragraph'>${data.WorkingExperience}</p>`;
+    image.appendChild(WorkingExperience);
+
+
+    // Create Activities elements 
+    let Activities = document.createElement('div');
+    Activities.classList.add('Activities');
+    Activities.innerHTML = `<h1 class='heading'>Activities</h1>
+                             <p class='paragraph'>${data.Activities}</p>`;
+    image.appendChild(Activities);
+
+
+    // Create interest elements 
+    let interest = document.createElement('div');
+    interest.classList.add('interest');
+    interest.innerHTML = `<h1 class='heading'>interest</h1>
+                             <p class='paragraph'>${data.interest}</p>`;
+    image.appendChild(interest);
+
+
+    // ... (Add similar elements for other fields) ...
+
+    console.log("Resume generated successfully.");
+}
+
+// download resume
 function dowloand() {
-    html2canvas(document.querySelector("#page")).then(canvas => {
+    html2canvas(document.querySelector("#image")).then(canvas => {
         let link = document.createElement("a");
         link.download = "your_cv.jpg";
         link.href = canvas.toDataURL("image/png");
