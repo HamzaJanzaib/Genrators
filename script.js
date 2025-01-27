@@ -30,52 +30,64 @@ document.addEventListener("DOMContentLoaded", function () {
             interest: document.getElementById('interest')?.value || ""
         };
 
-        // Fix for image input
+        // Handle image input
         let imageInput = document.getElementById('image');
-        formValues.imageFile = imageInput?.files[0] ? URL.createObjectURL(imageInput.files[0]) : '';
+        if (imageInput?.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                formValues.imageFile = e.target.result;
+                // Store data after image is loaded
+                window.localStorage.setItem('data', JSON.stringify(formValues));
+                proceedWithSubmit();
+            };
+            reader.readAsDataURL(imageInput.files[0]);
+        } else {
+            formValues.imageFile = '';
+            window.localStorage.setItem('data', JSON.stringify(formValues));
+            proceedWithSubmit();
+        }
 
-        // Storing data in local storage
-        window.localStorage.setItem('data', JSON.stringify(formValues));
-        console.log("Data saved to local storage");
+        function proceedWithSubmit() {
+            console.log("Data saved to local storage");
 
-        // Redirect immediately
-        // Check for blank/empty values
-        let requiredFields = {
-            'First Name': formValues.FirstName,
-            'Last Name': formValues.LastName,
-            'Field': formValues.Feild,
-            'Email': formValues.Email,
-            'Phone Number': formValues.PhoneNumber,
-            'Address': formValues.Address,
-            'City': formValues.City,
-            'CNIC Number': formValues.Cnicno,
-            'Skills': formValues.Skills,
-            'Intermediate': formValues.intermediate,
-            'Objective': formValues.Objective,
-            'Working Experience': formValues.WorkingExperience,
-            'Activities': formValues.Activities,
-            'Language': formValues.Language,
-            'Interests': formValues.interest
-        };
+            // Check for blank/empty values
+            let requiredFields = {
+                'First Name': formValues.FirstName,
+                'Last Name': formValues.LastName,
+                'Field': formValues.Feild,
+                'Email': formValues.Email,
+                'Phone Number': formValues.PhoneNumber,
+                'Address': formValues.Address,
+                'City': formValues.City,
+                'CNIC Number': formValues.Cnicno,
+                'Skills': formValues.Skills,
+                'Intermediate': formValues.intermediate,
+                'Objective': formValues.Objective,
+                'Working Experience': formValues.WorkingExperience,
+                'Activities': formValues.Activities,
+                'Language': formValues.Language,
+                'Interests': formValues.interest
+            };
 
-        let emptyFields = [];
-        for (let field in requiredFields) {
-            if (!requiredFields[field] || requiredFields[field].trim() === '') {
-                emptyFields.push(field);
+            let emptyFields = [];
+            for (let field in requiredFields) {
+                if (!requiredFields[field] || requiredFields[field].trim() === '') {
+                    emptyFields.push(field);
+                }
             }
-        }
 
-        if (emptyFields.length > 0) {
-            alert(`Please fill in the following required fields:\n${emptyFields.join(' / ')}`);
-            return;
-        }
+            if (emptyFields.length > 0) {
+                alert(`Please fill in the following required fields:\n${emptyFields.join(' / ')}`);
+                return;
+            }
 
-        if (!imageInput?.files[0]) {
-            alert('Please select a profile image');
-            return;
-        }
+            if (!imageInput?.files[0]) {
+                alert('Please select a profile image');
+                return;
+            }
 
-        window.location.href = 'templates.html'
+            window.location.href = 'templates.html';
+        }
     });
 });
 function simplecv() {
@@ -164,11 +176,10 @@ function generateResume() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    imageresume();
+        rightresume();
 });
 
 
-document.addEventListener('DOMContentLoaded', createResume);
 
 function grid() {
     window.location.href = 'resume.html';
@@ -187,87 +198,88 @@ function secounddesign() {
         console.error("Error: No data found in local storage.");
         return;
     }
-
+    
     data = JSON.parse(data);
     console.log(data);
-
+    
     page.innerHTML = ""
-
+    
     let grid = document.createElement('div');
     grid.classList.add('grid');
     grid.innerHTML = `  `;
     page.appendChild(grid);
-
+    
     let topdiv = document.createElement('div');
     topdiv.classList.add('topdiv');
     topdiv.textContent = `curriculum vitae`;
     grid.appendChild(topdiv);
-
+    
     let details = document.createElement('div');
     details.classList.add('details');
     details.innerHTML = ` <h4>1. <span class='dots'>first Name</span> ${data.FirstName}</h4>
-            <h4>2.<span class='dots'> last Name</span> ${data.LastName}</h4>
-            <h4>3. <span class='dots'>email</span> ${data.Email}</h4>
-          `
+    <h4>2.<span class='dots'> last Name</span> ${data.LastName}</h4>
+    <h4>3. <span class='dots'>email</span> ${data.Email}</h4>
+    `
     grid.appendChild(details);
-
+    
     // Create personal elements 
     let personal = document.createElement('div');
     personal.classList.add('personal');
     personal.innerHTML = `<h1 class='heading'>personal details</h1><br>
-        <h4>1.<span class='dots'> Address</span> ${data.Address}</h4>
+    <h4>1.<span class='dots'> Address</span> ${data.Address}</h4>
         <h4>2. <span class='dots'>City </span> ${data.City}</h4>
         <h4>3.<span class='dots'> Cnic No</span>  ${data.Cnicno}</h4>
         <h4>4.<span class='dots'> Feild</span>  ${data.Feild}</h4>`;
-    grid.appendChild(personal);
+        grid.appendChild(personal);
+        
+        // Create Objective elements 
+        let Objective = document.createElement('div');
+        Objective.classList.add('Objective');
+        Objective.innerHTML = `<h1 class='heading'>Objective</h1>
+        <p class='paragraph'>${data.Objective}</p>`;
+        grid.appendChild(Objective);
+        
+        // Create WorkingExperience elements 
+        let WorkingExperience = document.createElement('div');
+        WorkingExperience.classList.add('WorkingExperience');
+        WorkingExperience.innerHTML = `<h1 class='heading'>WorkingExperience</h1>
+        <p class='paragraph'>${data.WorkingExperience}</p>`;
+        grid.appendChild(WorkingExperience);
+        
+        
+        // Create Activities elements 
+        let Activities = document.createElement('div');
+        Activities.classList.add('Activities');
+        Activities.innerHTML = `<h1 class='heading'>Activities</h1>
+        <p class='paragraph'>${data.Activities}</p>`;
+        grid.appendChild(Activities);
+        
+        
+        // Create interest elements 
+        let interest = document.createElement('div');
+        interest.classList.add('interest');
+        interest.innerHTML = `<h1 class='heading'>interest</h1>
+        <p class='paragraph'>${data.interest}</p>`;
+        grid.appendChild(interest);
 
-    // Create Objective elements 
-    let Objective = document.createElement('div');
-    Objective.classList.add('Objective');
-    Objective.innerHTML = `<h1 class='heading'>Objective</h1>
-                            <p class='paragraph'>${data.Objective}</p>`;
-    grid.appendChild(Objective);
-
-    // Create WorkingExperience elements 
-    let WorkingExperience = document.createElement('div');
-    WorkingExperience.classList.add('WorkingExperience');
-    WorkingExperience.innerHTML = `<h1 class='heading'>WorkingExperience</h1>
-                            <p class='paragraph'>${data.WorkingExperience}</p>`;
-    grid.appendChild(WorkingExperience);
-
-
-    // Create Activities elements 
-    let Activities = document.createElement('div');
-    Activities.classList.add('Activities');
-    Activities.innerHTML = `<h1 class='heading'>Activities</h1>
-                            <p class='paragraph'>${data.Activities}</p>`;
-    grid.appendChild(Activities);
-
-
-    // Create interest elements 
-    let interest = document.createElement('div');
-    interest.classList.add('interest');
-    interest.innerHTML = `<h1 class='heading'>interest</h1>
-                            <p class='paragraph'>${data.interest}</p>`;
-    grid.appendChild(interest);
-
-
+        
     // ... (Add similar elements for other fields) ...
-
+    
     console.log("Resume generated successfully.");
-
+    
     let box = document.createElement('div');
     box.classList.add('blue-grid');
     box.innerHTML = ``;
     grid.appendChild(box);
-
+    
     let box2 = document.createElement('div');
     box2.classList.add('blue-grid2');
     box2.innerHTML = ``;
     grid.appendChild(box2);
-
-
+    
+    
 }
+document.addEventListener('DOMContentLoaded', thirddesign());
 
 function topblack() {
     window.location.href = 'resume.html';
@@ -584,9 +596,15 @@ function imageresume() {
 
     let topleft = document.createElement('div');
     topleft.classList.add('image-top-left');
-    topleft.innerHTML = `<img src="${data.imageFile}" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover;">`;
+    topleft.innerHTML = ``;
     top.appendChild(topleft);
 
+    let imagebox = document.createElement('div');
+    imagebox.classList.add('image-box-image-set');
+    imagebox.innerHTML = `<img src="${data.imageFile}" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover;">`;
+    topleft.appendChild(imagebox);
+
+    
     let topright = document.createElement('div');
     topright.classList.add('image-top-right');
     topright.innerHTML = `
@@ -641,13 +659,129 @@ function imageresume() {
     console.log("Resume generated successfully.");
 }
 
+function right() {
+    window.location.href = 'resume.html';
+    rightresume();
+}
+function rightresume() {
+    let page = document.getElementById('page');
+    if (!page) {
+        console.error("Error: Element 'page' not found");
+        return;
+    }
+    let data = window.localStorage.getItem('data');
+    if (!data) {
+        console.error("Error: No data found in local storage.");
+        return;
+    }
+
+    data = JSON.parse(data);
+    console.log(data);
+    page.innerHTML = ""    
+
+    let right = document.createElement('div');
+    right.classList.add('right-box');
+    right.innerHTML = `  `;
+    page.appendChild(right);
+    
+    let rightleft = document.createElement('div');
+    rightleft.classList.add('right-left');
+    rightleft.innerHTML = ` `;
+    right.appendChild(rightleft);
+
+    let rightright = document.createElement('div');
+    rightright.classList.add('right-right');
+    rightright.innerHTML = ``;
+    right.appendChild(rightright);
+
+    let righttopimage = document.createElement('div');
+    righttopimage.classList.add('right-top-image');
+    righttopimage.innerHTML = ``;
+    rightright.appendChild(righttopimage);
+
+    let imagebox = document.createElement('div');
+    imagebox.classList.add('right-right-image');
+    imagebox.innerHTML = `<img src="${data.imageFile}" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover;">`;
+    righttopimage.appendChild(imagebox);
+
+    let topright = document.createElement('div');
+    topright.classList.add('name-box');
+    topright.innerHTML = `
+    <h4 class='image-top-right'>${data.FirstName} ${data.LastName}</h4>
+    `;
+    rightright.appendChild(topright);
+
+    // Create personal elements 
+    let personal = document.createElement('div');
+    personal.classList.add('personal');
+    personal.innerHTML = `<h1 class='right-heading'>personal details</h1><br>
+         <h4 class='righth4'>1.<span >Email </span> ${data.Email}</h4>
+         <h4 class='righth4'>1.<span > Address</span> ${data.Address}</h4>
+         <h4 class='righth4'>2. <span >City </span> ${data.City}</h4>
+         <h4 class='righth4'>3.<span > Cnic No</span>  ${data.Cnicno}</h4>
+         <h4 class='righth4'>4.<span > Feild</span>  ${data.Feild}</h4>
+         <h4 class='righth4'>5.<span > Phone Number</span> ${data.PhoneNumber}</h4>
+         `;
+    rightright.appendChild(personal);
+
+    let language = document.createElement('div');
+    language.classList.add('Activities');
+    language.innerHTML = `<h1 class='right-heading'> language</h1>
+                            <h4 class='righth4'>${data.Language}</h4>`;
+    rightright.appendChild(language);
+
+    let black = document.createElement('div');
+    black.classList.add('black-box');
+    black.innerHTML = `  `;
+    rightleft.appendChild(black);
+    // Create Objective elements 
+    let Objective = document.createElement('div');
+    Objective.classList.add('Objective');
+    Objective.innerHTML = `<h1 class='right-heading'>Objective</h1>
+                             <p class='righth4''>${data.Objective}</p>`;
+    rightleft.appendChild(Objective);
+
+    // Create WorkingExperience elements 
+    let WorkingExperience = document.createElement('div');
+    WorkingExperience.classList.add('WorkingExperience');
+    WorkingExperience.innerHTML = `<h1 class='right-heading'>WorkingExperience</h1>
+                             <p class='righth4'>${data.WorkingExperience}</p>`;
+    rightleft.appendChild(WorkingExperience);
+
+
+    // Create Activities elements 
+    let Activities = document.createElement('div');
+    Activities.classList.add('Activities');
+    Activities.innerHTML = `<h1 class='right-heading'>Activities</h1>
+                             <p class='righth4'>${data.Activities}</p>`;
+    rightleft.appendChild(Activities);
+
+    let skills = document.createElement('div');
+    skills.classList.add('Activities');
+    skills.innerHTML = `<h1 class='right-heading'>Skills</h1>
+                             <p class='righth4'>${data.Skills}</p>`;
+    rightleft.appendChild(skills);
+
+
+    // Create interest elements 
+    let interest = document.createElement('div');
+    interest.classList.add('interest');
+    interest.innerHTML = `<h1 class='right-heading'>interest</h1>
+                             <p class='righth4'>${data.interest}</p>`;
+    rightleft.appendChild(interest);
+
+
+    // ... (Add similar elements for other fields) ...
+
+    console.log("Resume generated successfully.");
+}
+
 // download resume
 function dowloand() {
-    html2canvas(document.querySelector("#image")).then(canvas => {
+    html2pdf(document.querySelector("#page")).then(canvas => {
         let link = document.createElement("a");
-        link.download = "your_cv.jpg";
-        link.href = canvas.toDataURL("image/png");
+        link.download = "your_cv.pdf";
+        link.href = canvas.toDataURL("image/jpg");
         link.click();
     });
 }
-

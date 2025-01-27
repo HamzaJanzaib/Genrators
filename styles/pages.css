@@ -301,7 +301,9 @@
     height: 100%;
     position: relative;
     overflow: hidden;
-    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-top-right-h4{
@@ -315,3 +317,156 @@
     align-items: center;
     margin-top: 10px;
 }
+.image-box-image-set{
+    width: 70%;
+    height: 80%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    
+}
+.image-box img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;  
+}
+
+@media screen and (max-width: 480px) {
+    .image-box-image-set{
+        width: 80%;
+        height: 60%;
+    }
+    .image-top-right-h4{
+        font-size: 20px;
+    }
+}
+
+.right-box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.right-left{
+    width: 60%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-right{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid black;
+}
+
+.right-right-image{
+    margin: 20% auto;
+    width: 60%;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-right-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.right-heading{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+    background-color: transparent;
+}
+.right-heading::after{
+    content: "";
+   width: 100%;
+   height: 20px;
+   background-color: wheat;
+   position: absolute;
+   z-index: -1;
+   filter: blur(10px);
+   bottom: 0;
+   left: -2%;
+}
+.righth4{
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    text-transform: capitalize;
+ }
+.name-box{
+    width: fit-content;
+    height: 10%;
+    margin: 5px 10%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right-name{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    display: flex;
+    text-transform: uppercase;
+}
+.image-top-right{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    display: flex;
+    text-transform: uppercase;
+}
+.image-top-right::after{
+    content: "";
+    width: 100%;
+    height: 20px;
+    background-color: wheat;
+    position: absolute;
+    z-index: -1;
+    filter: blur(10px);
+    bottom: 40%;
+    left: -2%;
+}
+.black-box{
+    width: 100%;
+    height: 15%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(255, 253, 253);
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    .black-box{
+        font-size: 10px;
+    }
+    .right-heading{
+        font-size: 14px;
+    }
+    .righth4{
+        font-size: 6px;
+        font-weight: 900;
+    }
+    .right-name{
+        font-size: 10px;
+    }
+    .image-top-right{
+        font-size: 10px;
+    }
+    .image-top-right::after{
+        font-size: 10px;
+    }
+}
+
