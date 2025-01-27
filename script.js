@@ -136,7 +136,7 @@ function firstdesign() {
             <h4>3. <span class='dots'>email</span> ${data.Email}</h4>
           `
     page.appendChild(details);
-    
+
     //  create personal elements 
     let personal = document.createElement('div');
     personal.classList.add('personal');
@@ -506,6 +506,120 @@ function fourthdesign() {
 // fourth resume design 4 completed
 
 // fifth resume design 5 and onclick function green
+function green() {
+    window.location.href = 'resume.html';
+    fifthdesign();
+}
+function fifthdesign() {
+    let page = document.getElementById('page');
+    if (!page) {
+        console.error("Error: Element 'page' not found");
+        return;
+    }
+    let data = window.localStorage.getItem('data');
+    if (!data) {
+        console.error("Error: No data found in local storage.");
+        return;
+    }
+
+    data = JSON.parse(data);
+    console.log(data);
+    page.innerHTML = ""
+
+
+    let green = document.createElement('div');
+    green.classList.add('green');
+    green.innerHTML = `  `;
+    page.appendChild(green);
+
+    let greenleft = document.createElement('div');
+    greenleft.classList.add('green-left');
+    greenleft.innerHTML = ``;
+    green.appendChild(greenleft);
+
+    let greenlefttop = document.createElement('div');
+    greenlefttop.classList.add('green-left-top');
+    greenlefttop.innerHTML = ``;
+    greenleft.appendChild(greenlefttop);
+
+    let greenimage = document.createElement('div');
+    greenimage.classList.add('green-image');
+    greenimage.innerHTML = `<img src="${data.imageFile}" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover;">`;
+    greenlefttop.appendChild(greenimage);
+
+    let greenleftbottom = document.createElement('div');
+    greenleftbottom.classList.add('green-left-bottom');
+    greenleftbottom.innerHTML = ``;
+    greenleft.appendChild(greenleftbottom);
+
+    let textcontaner = document.createElement('div');
+    textcontaner.classList.add('text-contaner');
+    textcontaner.innerHTML = `
+    <h1 class='green-left-bottom-h1'>about me</h1>
+    <p class='information-contaner-p'>${data.Objective}</p>
+    `;
+    greenleftbottom.appendChild(textcontaner);
+
+    let informationcontaner = document.createElement('div');
+    informationcontaner.classList.add('information-contaner');
+    informationcontaner.innerHTML = `
+            <h1 class='information-contaner-h1'>personal information</h1>
+            <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>name</span> ${data.FirstName} ${data.LastName}</h3>
+            <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>email</span> ${data.Email}</h3>
+            <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>phone</span> ${data.Phone}</h3>
+            <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>address</span> ${data.Address}</h3>
+            <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>city</span> ${data.City}</h3>
+            <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>Cnic No</span> ${data.Cnicno}</h3>
+    `;
+    greenleftbottom.appendChild(informationcontaner);
+
+    let languagecontaner = document.createElement('div');
+    languagecontaner.classList.add('language-contaner');
+    languagecontaner.innerHTML = `
+    <h1 class='language-contaner-h1'>language</h1>
+    <h3 class='language-contaner-h3'>${data.Language}</h3>
+    `;
+    greenleftbottom.appendChild(languagecontaner);
+
+    let greenright = document.createElement('div');
+    greenright.classList.add('green-right');
+    greenright.innerHTML = ``;
+    green.appendChild(greenright);
+
+    let greenrighttopblack = document.createElement('div');
+    greenrighttopblack.classList.add('green-right-top-black');
+    greenrighttopblack.innerHTML = `<h1 class='green-right-top-black-h1'>additional information</h1>`;
+    greenright.appendChild(greenrighttopblack);
+
+    // Create WorkingExperience elements 
+    let greenexperience = document.createElement('div');
+    greenexperience.classList.add('green-experience');
+    greenexperience.innerHTML = `<h1 class='green-right-heading'>WorkingExperience</h1>
+                             <p class='green-right-p'>${data.WorkingExperience}</p>`;
+    greenright.appendChild(greenexperience);
+
+
+    // Create Activities elements 
+    let greenactivities = document.createElement('div');
+    greenactivities.classList.add('green-activities');
+    greenactivities.innerHTML = `<h1 class='green-right-heading'>Activities</h1>
+                             <p class='green-right-p'>${data.Activities}</p>`;
+    greenright.appendChild(greenactivities);
+
+    let greenskills = document.createElement('div');
+    greenskills.classList.add('greenskills');
+    greenskills.innerHTML = `<h1 class='green-right-heading'>Skills</h1>
+                             <p class='green-right-p'>${data.Skills}</p>`;
+    greenright.appendChild(greenskills);
+
+
+    // Create interest elements 
+    let greeninterest = document.createElement('div');
+    greeninterest.classList.add('green-interest');
+    greeninterest.innerHTML = `<h1 class='green-right-heading'>interest</h1>
+                             <p class='green-right-p'>${data.interest}</p>`;
+    greenright.appendChild(greeninterest);
+}
 // fifth resume design 5 completed
 
 // sixth resume design 6 and onclick function blue
@@ -795,7 +909,7 @@ function ninthdesign() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    ninthdesign();
+    fifthdesign();
 });
 
 // download resume using html2pdf

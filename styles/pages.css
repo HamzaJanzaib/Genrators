@@ -529,3 +529,268 @@
         font-size: 10px;
     }
 }
+
+/* Green box container */
+.green{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+/* Green box left section */
+.green-left{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(38, 128, 38, 0.253);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Green box right section */
+.green-right{
+    width: 60%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 10px;
+}
+
+/* Green box left top section */
+.green-left-top{
+    width: 100%;
+    height: 40%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Green box left top image */
+.green-image{
+    width: 80%;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* Green box left bottom section */
+.green-left-bottom{
+    width: 100%;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* Green box left bottom h1 */
+.green-left-bottom-h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+}
+.text-contaner{
+    width: 100%;
+    height: 30%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+/* Green box left bottom information contaner */
+.information-contaner{
+    width: 100%;
+    height: 40%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Green box left bottom h1 */
+.information-contaner-h1{
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Green box left bottom h3 */
+.information-contaner-h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+/* Green box left bottom h3 span */
+.green-left-bottom-h3-span::after{
+    content: ":";
+    font-weight: 600;
+    color: red;
+}
+
+/* Green box left bottom language contaner */
+.language-contaner{
+    width: 100%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+/* Green box left bottom language contaner h1 */
+.language-contaner-h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+}
+
+/* Green box left bottom language contaner h3 */
+.language-contaner-h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    text-transform: capitalize;
+}
+
+/* Green box right heading */
+.green-right-heading{
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border-bottom: 2px solid black;
+    position: relative;
+}
+.green-right-heading::after{
+    content: ":";
+}
+.green-right-heading::before{
+    content: "";
+    width: 100%;
+    height: 10%;
+    background-color: rgba(38, 128, 38, 0.466);
+    position: absolute;
+    z-index: -1;
+    filter: blur(10px);
+    bottom: 0%;
+    left: -2%;
+}
+
+/* Green box right paragraph */
+.green-right-p{
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    text-transform: capitalize;
+}
+
+/* Green box right experience */
+.green-experience{
+    width: 100%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Green box right activities */
+.green-activities{
+    width: 100%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Green box right skills */
+.greenskills{
+    width: 100%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Green box right interest */
+.green-interest{
+    width: 100%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.green-right-top-black{
+    width: 100%;
+    height: 15%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Green box right top black h1 */
+.green-right-top-black-h1{
+    font-size: 25px;
+    font-weight: 800;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+}
+@media screen and (max-width: 480px) {
+    .green-right-top-black-h1{
+        font-size: 12px;
+    }
+    .green-right-heading{
+        font-size: 12px;
+    }
+    .green-right-p{
+        font-size: 8px;
+        font-weight: 600;
+    }
+    .green-right-top-black{
+        height: 15%;
+    }
+    .green-left-top{
+        height: 30%;
+    }
+    .green-image{
+        width: 80%;
+        height: 60%;
+    }
+    .green-left-bottom{
+        height: 60%;
+    }
+    .green-left-bottom-h1{
+        font-size: 15px;
+    }
+    .information-contaner-p{
+        font-size: 8px;
+        font-weight: 600;
+    }
+    .information-contaner-h1{
+        font-size: 9px;
+    }
+    .information-contaner-h3{
+        font-size: 8px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+    .language-contaner-h1{
+        font-size: 12px;
+    }
+    .language-contaner-h3{
+        font-size: 8px;
+        font-weight: 600;
+    }
+}
