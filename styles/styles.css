@@ -14,6 +14,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Main content container */
 .display-contant {
     display: flex;
     width: 100vw;
@@ -22,6 +23,7 @@ body {
     padding: 5rem;
 }
 
+/* Left section styles */
 .display-contant .left {
     width: 50%;
     height: 100%;
@@ -31,6 +33,7 @@ body {
     position: relative;
 }
 
+/* Right section styles */
 .display-contant .right {
     width: 50%;
     height: 100%;
@@ -40,6 +43,7 @@ body {
     position: relative;
 }
 
+/* Text container in right section */
 .display-contant .right .text {
     color: black;
     font-weight: 700;
@@ -47,11 +51,13 @@ body {
     text-align: center;
 }
 
+/* Main heading styles */
 .display-contant .right .text h1 {
     font-size: 5rem;
     position: relative;
 }
 
+/* Add exclamation mark after heading */
 .display-contant .right .text h1::after {
     content: "!";
     color: red;
@@ -59,11 +65,13 @@ body {
     position: absolute;
 }
 
+/* Paragraph text styles */
 .display-contant .right .text p {
     font-size: 1.5rem;
     margin-top: 2rem;
 }
 
+/* Call-to-action button styles */
 .display-contant .right .text a {
     display: inline-block;
     font-size: 2rem;
@@ -79,13 +87,14 @@ body {
     cursor: pointer;
 }
 
+/* Button hover effect */
 .display-contant .right .text a:hover {
     background-color: white;
     color: black;
     border: 0.3rem solid black;
 }
 
-/* meadia quari 768px */
+/* Tablet breakpoint (768px) */
 @media screen and (max-width: 768px) {
     .display-contant {
         padding: 2rem;
@@ -117,7 +126,7 @@ body {
 
 }
 
-/* meadia quari 480px */
+/* Mobile breakpoint (480px) */
 @media screen and (max-width: 480px) {
     .display-contant .right .text h1 {
         font-size: 2rem;
@@ -137,7 +146,7 @@ body {
 
 }
 
-/* meadia quari 967px */
+/* Large tablet/small desktop breakpoint (967px) */
 @media screen and (max-width: 967px) {
     .display-contant .left {
         display: none;
@@ -169,8 +178,7 @@ body {
 
 }
 
-/* secound page */
-
+/* Navigation styles */
 .nav-designs {
     display: flex;
     justify-content: space-between;
@@ -181,23 +189,27 @@ body {
     width: 100%;
 }
 
+/* Logo image styles */
 .nav-designs img {
     width: 10rem;
     cursor: pointer;
 }
 
+/* Navigation heading */
 .nav-designs h1 {
     text-align: center;
     font-size: 2rem;
 
 }
 
+/* Left section of navigation */
 .nav-designs .lef {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Search box container */
 .search-box {
     position: relative;
     display: flex;
@@ -207,6 +219,7 @@ body {
     overflow: hidden;
 }
 
+/* Search input field */
 .search-box input {
     width: 100%;
     padding: 1rem 2rem;
@@ -216,6 +229,7 @@ body {
     outline: none;
 }
 
+/* Search icon */
 .search-box i {
     position: absolute;
     right: 2%;
@@ -227,6 +241,7 @@ body {
     cursor: pointer;
 }
 
+/* Download button styles */
 .dowlond button {
     color: WHITE;
     height: 50px;
@@ -242,6 +257,7 @@ body {
     cursor: pointer;
 }
 
+/* Tablet navigation styles */
 @media screen and (max-width: 768px) {
     .nav-designs {
         padding: 2rem;
@@ -266,6 +282,7 @@ body {
 
 }
 
+/* Mobile navigation styles */
 @media screen and (max-width: 480px) {
     .nav-designs {
         height: 10vh;
@@ -298,6 +315,7 @@ body {
 
 }
 
+/* Rules section styles */
 .rules-box {
     height: 5vh;
     background-color: rgba(128, 128, 128, 0.253);
@@ -309,17 +327,20 @@ body {
     font-weight: 700;
 }
 
+/* Rules link styles */
 .rules-box a {
     text-decoration: none;
     color: black;
     gap: 1rem;
 }
 
+/* Rules container */
 .roules {
     height: 83.3vh;
     position: relative;
 }
 
+/* Rules text container */
 .roules-text {
     font-size: 1.5rem;
     position: absolute;
@@ -329,6 +350,7 @@ body {
     width: 50%;
 }
 
+/* Rules heading */
 .roules-text h1 {
     font-size: 3rem;
     font-weight: 700;
@@ -336,16 +358,19 @@ body {
     margin-bottom: 20px;
 }
 
+/* Add colon after rules heading */
 .roules-text h1::after {
     content: ":";
     color: red;
     font-size: 3rem;
 }
 
+/* Rules paragraph */
 .roules-text p {
     font-size: 2rem;
 }
 
+/* Templates grid container */
 .templates-box {
     height: 83.3vh;
     padding: 5rem 5rem;
@@ -355,12 +380,14 @@ body {
     gap: 2rem;
 }
 
+/* Individual template box */
 .box {
     background-color: #f0f0f0;
     padding: 1rem 5rem;
     border-radius: 20px;
 }
 
+/* Template link styles */
 .box a {
     text-decoration: none;
     color: black;
@@ -368,6 +395,7 @@ body {
     margin: 2rem 3.5rem;
 }
 
+/* Template image container */
 .box .box-img {
     width: 80%;
     height: 80%;
@@ -377,16 +405,19 @@ body {
     transition: all 0.5s ease;
 }
 
+/* Template image */
 .box .box-img img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
+/* Template image hover effect */
 .box .box-img img:hover {
     scale: 1.1;
 }
 
+/* Template button styles */
 .box button {
     text-transform: uppercase;
     font-weight: 600;
@@ -398,11 +429,11 @@ body {
     border-radius: 20px;
     padding: 5px 30px;
     background-color: black;
-    /* margin-left: 14%; */
     color: white;
     margin: 12px auto;
 }
 
+/* Tablet template grid */
 @media screen and (max-width: 768px) {
     .templates-box {
         padding: 2rem;
@@ -415,6 +446,7 @@ body {
     }
 }
 
+/* Mobile template grid */
 @media screen and (max-width: 480px) {
     .templates-box {
         padding: 2rem;
@@ -427,6 +459,7 @@ body {
     }
 }
 
+/* Page container styles */
 .page {
     color: black;
     height: 100vh;
@@ -436,6 +469,7 @@ body {
     box-shadow: 5px 5px 20px rgba(82, 29, 29, 0.1);
 }
 
+/* Top section styles */
 .top {
     display: flex;
     justify-content: space-between;
@@ -446,6 +480,7 @@ body {
     color: white;
 }
 
+/* Top division styles */
 .topdiv {
     height: 15%;
     width: 100%;
@@ -458,6 +493,7 @@ body {
     text-decoration: underline;
 }
 
+/* Details section styles */
 .details {
     height: 10%;
     width: 100%;
@@ -466,12 +502,14 @@ body {
     text-transform: capitalize;
 }
 
+/* Add colon after dots */
 .dots::after {
     content: ':';
     color: red;
     margin-right: 5px;
 }
 
+/* Personal information section */
 .personal {
     height: 20%;
     width: 100%;
@@ -480,17 +518,20 @@ body {
     text-transform: capitalize;
 }
 
+/* Section heading styles */
 .heading {
     text-decoration: underline;
     position: relative;
 }
 
+/* Add colon after heading */
 .heading::after {
     content: ':';
     color: red;
     margin-right: 5px;
 }
 
+/* Add bullet point before heading */
 .heading::before {
     content: "";
     height: 8px;
@@ -503,6 +544,7 @@ body {
     margin-left: 4px;
 }
 
+/* Objective section styles */
 .Objective {
     height: 15%;
     width: 100%;
@@ -512,6 +554,7 @@ body {
     overflow: hidden;
 }
 
+/* Paragraph styles */
 .paragraph {
     font-size: 1.3rem;
     font-weight: 200;
@@ -519,6 +562,7 @@ body {
     position: relative;
 }
 
+/* Add bullet point after paragraph */
 .paragraph::after {
     content: "";
     height: 4px;
@@ -530,6 +574,7 @@ body {
     margin-left: 4px;
 }
 
+/* Working Experience section */
 .WorkingExperience {
     height: 15%;
     width: 100%;
@@ -539,6 +584,7 @@ body {
     overflow: hidden;
 }
 
+/* Activities section */
 .Activities {
     height: 15%;
     width: 100%;
@@ -548,6 +594,7 @@ body {
     padding: 20px 30px;
 }
 
+/* Interests section */
 .interest {
     height: 10%;
     width: 100%;
@@ -557,6 +604,7 @@ body {
     overflow: hidden;
 }
 
+/* Mobile responsive styles */
 @media only screen and (max-width:480px) {
     .page {
         width: 95%;

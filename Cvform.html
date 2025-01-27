@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV-Form</title>
+    <title>CV Builder - Create Your Professional Resume</title>
+    <!-- css files -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/form.css">
-    <link rel="shortcut icon" href="https://imgs.search.brave.com/Dm2vIGZ-Ovrg-8c-amsMebhZL86m_p5ZnNt_IDf_qnI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA5LzMwLzAzLzI3/LzM2MF9GXzkzMDAz/Mjc3M19VQzFpVkxJ/ckxQNlY3c2JwUTRP/aUlIQXJNYnBUNU40/Yy5qcGc" type="image/x-icon">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/5d/e6/ba/5de6ba71a04c8638af9e70dcdcd2df73.jpg" type="image/x-icon">
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -17,6 +19,7 @@
 <body>
 
     <main>
+        <!-- Navigation Bar -->
         <nav class="nav-designs">
             <div class="lef">
                 <a href="templates.html"><img src="public/images/logo.png" alt=""></a>
@@ -27,9 +30,13 @@
                 <i class="fas fa-search"></i>
             </div>
         </nav>
-        <form class="form-box" id="form"><!-- form start-->
-            <div class="top-group"><!-- top-group start-->
-                <div class="first"><!-- first end-->
+
+        <!-- Main Form -->
+        <form class="form-box" id="form">
+            <!-- Top Section -->
+            <div class="top-group">
+                <!-- Personal Details -->
+                <div class="first">
                     <div class="input-group">
                         <label for="FirstName">First Name</label>
                         <input type="text" id="FirstName" name="First Name">
@@ -42,17 +49,20 @@
                         <label for="Feild">Feild</label>
                         <input type="text" id="Feild" name="Feild">
                     </div>
-                </div><!-- first end-->
-                <div class="second"><!-- second end-->
+                </div>
+                <!-- Image Upload -->
+                <div class="second">
                     <div class="img-group">
                         <label id="image-label" for="image" >Add Your Image</label>
                         <input type="file" id="image" name="Add Your Image" accept="image/*">
                     </div>
-                </div><!-- second end-->
-            </div><!-- top-group end-->
+                </div>
+            </div>
 
-            <section class="middle-group"><!-- middle-group start-->
-                <div class="middle-1"><!--middle-1 start-->
+            <!-- Middle Section -->
+            <section class="middle-group">
+                <!-- Personal Information -->
+                <div class="middle-1">
                     <H3>personal information</H3>
                     <div class="input-group">
                         <label for="Email">Email</label>
@@ -74,8 +84,9 @@
                         <label for="Cnicno">CNIC NO</label>
                         <input type="number" id="Cnicno" name="Cnic no">
                     </div>
-                </div><!--middle-1 end-->
-                <div class="middle-2"><!--middle-2 start-->
+                </div>
+                <!-- Skills & Education -->
+                <div class="middle-2">
                     <h3>Skills</h3>
                     <div class="input-group">
                         <label for="Skills 1">Skills 1</label>
@@ -94,9 +105,11 @@
                         <label for="intermediate">intermediate</label>
                         <input type="text" id="intermediate" name="intermediate">
                     </div>
-                </div><!--middle-2 end-->
+                </div>
             </section>
-            <section class="textarea"><!--textarea start-->
+
+            <!-- Additional Information -->
+            <section class="textarea">
                 <h3>Objective</h3>
                 <div class="textarea">
                     <textarea type="text" id="Objective" rows="2" name="Objective"></textarea>
@@ -117,11 +130,12 @@
                 <div class="textarea">
                     <textarea type="text" id="interest" rows="2" name="interest"></textarea>
                 </div>
+                <!-- Submit Button -->
                 <div class="submit">
                     <button id="submit">submit</button>
                 </div>
-            </section><!--textarea end-->
-        </form><!-- form end-->
+            </section>
+        </form>
     </main>
     <script src="script.js"></script>
 </body>

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", serif;
+}
+
+/* Grid container styles */
 .grid {
     padding: 10px;
     width: 100%;
@@ -6,6 +13,7 @@
     overflow: hidden;
 }
 
+/* Decorative blue gradient circle in top left */
 .blue-grid {
     position: absolute;
     top: -12%;
@@ -19,6 +27,7 @@
     z-index: -1;
 }
 
+/* Decorative blue gradient circle in bottom right */
 .blue-grid2 {
     position: absolute;
     bottom: -10%;
@@ -32,15 +41,16 @@
     z-index: -1;
 }
 
+/* Black section container */
 .black {
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
     padding: 10px;
-
 }
 
+/* Black top box styles */
 .blacktopbox {
     width: 100%;
     height: 25%;
@@ -54,6 +64,7 @@
     align-items: center;
 }
 
+/* Black section heading */
 .blackheading {
     font-size: 50px;
     font-weight: 600;
@@ -62,6 +73,7 @@
     text-transform: uppercase;
 }
 
+/* Info section styles */
 .info {
     display: flex;
     flex-direction: row;
@@ -73,6 +85,7 @@
     font-weight: 300;
 }
 
+/* Blue section container */
 .blue {
     width: 100%;
     height: 100%;
@@ -81,6 +94,7 @@
     display: flex;
 }
 
+/* Left section of blue container */
 .left {
     width: 70%;
     height: 100%;
@@ -91,6 +105,7 @@
     flex-direction: column;
 }
 
+/* Right section of blue container */
 .right {
     width: 30%;
     background-color: #082B4D;
@@ -104,6 +119,7 @@
     overflow: hidden;
 }
 
+/* Blue section heading styles */
 .blueheading {
     font-size: 20px;
     font-weight: 600;
@@ -112,12 +128,14 @@
     margin-bottom: 10px;
 }
 
+/* Add colon after blue heading */
 .blueheading::after {
     content: ":";
     margin-left: 5px;
     color: red;
 }
 
+/* Blue section h4 styles */
 .blueh4 {
     margin-bottom: 10px;
     font-size: 14px;
@@ -126,6 +144,7 @@
     color: white;
 }
 
+/* Top design section styles */
 .topdesign {
     width: 100%;
     height: 15%;
@@ -142,6 +161,7 @@
     margin-bottom: 20px;
 }
 
+/* Mobile responsive styles */
 @media (max-width: 480px) {
     .topdesign {
         font-size: 12px;
@@ -152,10 +172,6 @@
     }
 
     .blueh4 {
-        font-size: 12px;
-    }
-
-    .topdesign {
         font-size: 12px;
     }
 
@@ -181,6 +197,7 @@
     }
 }
 
+/* Brown section container */
 .brown {
     width: 100%;
     height: 100%;
@@ -189,6 +206,7 @@
     display: flex;
 }
 
+/* Left section of brown container */
 .brownleft {
     width: 40%;
     height: 100%;
@@ -203,6 +221,7 @@
     gap: 10px;
 }
 
+/* Right section of brown container */
 .brownright {
     width: 60%;
     height: 100%;
@@ -215,6 +234,7 @@
     padding: 10px;
 }
 
+/* Line separator styles */
 .line {
     width: 100%;
     height: 10%;
@@ -229,6 +249,8 @@
     align-items: center;
     background-color: white;
 }
+
+/* Brown section top heading */
 .broentoph {
     font-size: 40px;
     font-weight: 900;
@@ -236,6 +258,8 @@
     text-align: center;
     text-transform: uppercase;
 }  
+
+/* Brown section heading styles */
 .brownheading{
     font-size: 20px;
     font-weight: 600;
@@ -244,12 +268,16 @@
     text-decoration: underline;
     text-transform: uppercase;
 }
+
+/* Brown section h4 styles */
 .brownh4{
     color: black;
     font-size: 14px;
     font-weight: 400;
     text-transform: capitalize;
 }
+
+/* Spacer element */
 .spacer{
     width: 100%;
     height: 10%;
@@ -257,6 +285,7 @@
     overflow: hidden;
 }
 
+/* Mobile responsive styles for brown section */
 @media screen and (max-width: 480px) {
     .spacer{
         font-size: 12px;
@@ -281,6 +310,7 @@
     }
 }
 
+/* Image box container */
 .image-box{
     width: 100%;
     height: 100%;
@@ -288,6 +318,7 @@
     overflow: hidden;
 }
 
+/* Image top section */
 .image-top{
     width: 100%;
     height: 20%;
@@ -296,6 +327,8 @@
     background-color: #5A9BD3;
     display: flex;
 }
+
+/* Left section of image top */
 .image-top-left{
     width: 30%;
     height: 100%;
@@ -306,6 +339,7 @@
     justify-content: center;
 }
 
+/* Image top right heading */
 .image-top-right-h4{
     font-size: 30px;
     font-weight: 600;
@@ -317,20 +351,24 @@
     align-items: center;
     margin-top: 10px;
 }
+
+/* Image box image container */
 .image-box-image-set{
     width: 70%;
     height: 80%;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    
 }
+
+/* Image styles */
 .image-box img{
     width: 100%;
     object-fit: cover;
     height: 100%;  
 }
 
+/* Mobile responsive styles for image section */
 @media screen and (max-width: 480px) {
     .image-box-image-set{
         width: 80%;
@@ -341,6 +379,7 @@
     }
 }
 
+/* Right box container */
 .right-box{
     width: 100%;
     height: 100%;
@@ -349,6 +388,7 @@
     display: flex;
 }
 
+/* Left section of right box */
 .right-left{
     width: 60%;
     height: 100%;
@@ -356,6 +396,7 @@
     overflow: hidden;
 }
 
+/* Right section of right box */
 .right-right{
     width: 40%;
     height: 100%;
@@ -364,6 +405,7 @@
     border-left: 1px solid black;
 }
 
+/* Right section image container */
 .right-right-image{
     margin: 20% auto;
     width: 60%;
@@ -372,12 +414,15 @@
     overflow: hidden;
 }
 
+/* Right section image styles */
 .right-right-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
+
+/* Right section heading styles */
 .right-heading{
     font-size: 20px;
     font-weight: 600;
@@ -386,23 +431,29 @@
     position: relative;
     background-color: transparent;
 }
+
+/* Decorative blur effect after right heading */
 .right-heading::after{
     content: "";
-   width: 100%;
-   height: 20px;
-   background-color: wheat;
-   position: absolute;
-   z-index: -1;
-   filter: blur(10px);
-   bottom: 0;
-   left: -2%;
+    width: 100%;
+    height: 20px;
+    background-color: wheat;
+    position: absolute;
+    z-index: -1;
+    filter: blur(10px);
+    bottom: 0;
+    left: -2%;
 }
+
+/* Right section h4 styles */
 .righth4{
     font-size: 14px;
     font-weight: 400;
     color: black;
     text-transform: capitalize;
- }
+}
+
+/* Name box container */
 .name-box{
     width: fit-content;
     height: 10%;
@@ -413,6 +464,8 @@
     flex-direction: column;
     justify-content: center;
 }
+
+/* Right name styles */
 .right-name{
     font-size: 20px;
     font-weight: 600;
@@ -420,6 +473,8 @@
     display: flex;
     text-transform: uppercase;
 }
+
+/* Image top right styles */
 .image-top-right{
     font-size: 20px;
     font-weight: 600;
@@ -428,6 +483,8 @@
     display: flex;
     text-transform: uppercase;
 }
+
+/* Decorative blur effect after image top right */
 .image-top-right::after{
     content: "";
     width: 100%;
@@ -439,6 +496,8 @@
     bottom: 40%;
     left: -2%;
 }
+
+/* Black box container */
 .black-box{
     width: 100%;
     height: 15%;
@@ -448,6 +507,7 @@
     color: white;
 }
 
+/* Mobile responsive styles for various elements */
 @media screen and (max-width: 480px) {
     .black-box{
         font-size: 10px;
@@ -469,4 +529,3 @@
         font-size: 10px;
     }
 }
-
