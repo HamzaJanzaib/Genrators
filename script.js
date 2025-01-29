@@ -1,4 +1,6 @@
 
+
+
 // form dom content loaded function and form submit event listener
 document.addEventListener("DOMContentLoaded", function () {
     let form = document.getElementById('form');
@@ -68,8 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 'Intermediate': formValues.intermediate,
                 'Objective': formValues.Objective,
                 'Working Experience': formValues.WorkingExperience,
-                'Matriculation': formValues.Matriculation,
-                'Skills2': formValues.Skills2,
                 'Activities': formValues.Activities,
                 'Language': formValues.Language,
                 'Interests': formValues.interest
@@ -570,7 +570,7 @@ function fifthdesign() {
             <h1 class='information-contaner-h1'>personal information</h1>
             <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>name</span> ${data.FirstName} ${data.LastName}</h3>
             <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>email</span> ${data.Email}</h3>
-            <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>phone</span> ${data.Phone}</h3>
+            <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>phone</span> ${data.PhoneNumber}</h3>
             <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>address</span> ${data.Address}</h3>
             <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>city</span> ${data.City}</h3>
             <h3 class='information-contaner-h3'><span class='green-left-bottom-h3-span'>Cnic No</span> ${data.Cnicno}</h3>
@@ -774,7 +774,7 @@ function seventhdesign() {
     topgreensecondpersonalbox.classList.add('topgreensecondpersonalbox');
     topgreensecondpersonalbox.innerHTML = `
     <li class='topgreensecondpersonalboxh4'> <span class='dots'> Email</span>  ${data.Email}</li>
-    <li class='topgreensecondpersonalboxh4'> <span class='dots'> Phone</span>  ${data.Phone}</li>
+    <li class='topgreensecondpersonalboxh4'> <span class='dots'> Phone</span>  ${data.PhoneNumber}</li>
     <li class='topgreensecondpersonalboxh4'> <span class='dots'> Cnic No</span>  ${data.Cnicno}</li>
     <li class='topgreensecondpersonalboxh4'> <span class='dots'> Address</span> ${data.Address}</li>
     <li class='topgreensecondpersonalboxh4'> <span class='dots'>City </span> ${data.City}</li>
@@ -1022,9 +1022,144 @@ function ninthdesign() {
 
 
 }
+// ninth resume design 9 completed
+
+// tenth resume design 10 and onclick function topblue
+function professional() {
+    window.location.href = 'resume.html';
+    tenthdesign();
+}
+// tenth resume design 10
+function tenthdesign() {
+    let page = document.getElementById('page');
+    if (!page) {
+        console.error("Error: Element 'page' not found");
+        return;
+    }
+    let data = window.localStorage.getItem('data');
+    if (!data) {
+        console.error("Error: No data found in local storage.");
+        return;
+    }
+
+    data = JSON.parse(data);
+    console.log(data);
+
+    page.innerHTML = ""
+
+    let proficationalmain = document.createElement('div');
+    proficationalmain.classList.add('proficationalmain');
+    proficationalmain.innerHTML = `  `;
+    page.appendChild(proficationalmain);
+
+    let proficationalleft    = document.createElement('div');
+    proficationalleft.classList.add('proficationalleft');
+    proficationalleft.innerHTML = `  `;
+    proficationalmain.appendChild(proficationalleft);
+
+    let proficationalleftimage = document.createElement('div');
+    proficationalleftimage.classList.add('proficationalleftimage');
+    proficationalleftimage.innerHTML = ` `;
+    proficationalleft.appendChild(proficationalleftimage);
+
+
+    let proficationalleftimagebox = document.createElement('div');
+    proficationalleftimagebox.classList.add('proficationalleftimagebox');
+    proficationalleftimagebox.innerHTML = ` <img src="${data.imageFile}" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover;">`;
+    proficationalleftimage.appendChild(proficationalleftimagebox);
+
+    let proficationalleftinfo = document.createElement('div');
+    proficationalleftinfo.classList.add('proficationalleftinfo');
+    proficationalleftinfo.innerHTML = ` <h1 class='proficationalleftinfoh1'>personal details</h1>
+    <h4 class='proficationalleftinfoh4'> email: ${data.Email}</h4>
+    <h4 class='proficationalleftinfoh4'> phone number: ${data.PhoneNumber}</h4>
+    <h4 class='proficationalleftinfoh4'> location:${data.Address}</h4>
+    <h4 class='proficationalleftinfoh4'> city: ${data.City}</h4>
+    <h4 class='proficationalleftinfoh4'> cnic no: ${data.Cnicno}</h4>
+    <h4 class='proficationalleftinfoh4'> feild: ${data.Feild}</h4>
+    `;
+    proficationalleft.appendChild(proficationalleftinfo);
+
+    let proficationalleftskills = document.createElement('div');
+    proficationalleftskills.classList.add('proficationalleftskills');
+    proficationalleftskills.innerHTML = ` <h1 class='proficationalleftskillsh1'>skills</h1>
+    <h4 class='proficationalleftskillsh4'>${data.Skills}</h4>
+    <h4 class='proficationalleftskillsh4'>${data.Skills2}</h4>
+    `;
+    proficationalleft.appendChild(proficationalleftskills);
+
+    let proficationallefteducation = document.createElement('div');
+    proficationallefteducation.classList.add('proficationallefteducation');
+    proficationallefteducation.innerHTML = ` <h1 class='proficationallefteducationh1'>education</h1>
+    <h4 class='proficationallefteducationh4'>${data.Matriculation}</h4>
+    <h4 class='proficationallefteducationh4'>${data.intermediate}</h4>
+    `;
+    proficationalleft.appendChild(proficationallefteducation);
+
+
+    let proficationalleftgap = document.createElement('div');
+    proficationalleftgap.classList.add('proficationalleftgap');
+    proficationalleftgap.innerHTML = ` `;
+    proficationalleft.appendChild(proficationalleftgap);
+
+
+    let proficationalleftlanguage = document.createElement('div');
+    proficationalleftlanguage.classList.add('proficationalleftlanguage');
+    proficationalleftlanguage.innerHTML = ` <h1 class='proficationalleftlanguageh1'>language</h1>
+    <h4 class='proficationalleftlanguageh4'>${data.Language}</h4>
+    `;
+    proficationalleft.appendChild(proficationalleftlanguage);
+
+
+    let proficationalright = document.createElement('div');
+    proficationalright.classList.add('proficationalright');
+    proficationalright.innerHTML = `  `;
+    proficationalmain.appendChild(proficationalright);
+    
+    let proficationalrightblanck = document.createElement('div');
+    proficationalrightblanck.classList.add('proficationalrightblanck');
+    proficationalrightblanck.innerHTML = `  `;
+    proficationalright.appendChild(proficationalrightblanck);
+
+    let proficationalrightname = document.createElement('div');
+    proficationalrightname.classList.add('proficationalrightname');
+    proficationalrightname.innerHTML = ` <h1 class='proficationalrightnameh1'>${data.FirstName} ${data.LastName}</h1>
+    <h4 class='proficationalrightnameh4'>${data.Feild}</h4>
+    `;
+    proficationalright.appendChild(proficationalrightname);
+
+    let proficationalrightobjective = document.createElement('div');
+    proficationalrightobjective.classList.add('proficationalrightobjective');
+    proficationalrightobjective.innerHTML = ` <h1 class='proficationalrightobjectiveh1'>Objective</h1>
+    <h4 class='proficationalrightobjectiveh4'>${data.Objective}</h4>
+    `;
+    proficationalright.appendChild(proficationalrightobjective);
+
+    let proficationalrightworkingexperience = document.createElement('div');
+    proficationalrightworkingexperience.classList.add('proficationalrightworkingexperience');
+    proficationalrightworkingexperience.innerHTML = ` <h1 class='proficationalrightworkingexperienceh1'>WorkingExperience</h1>
+    <h4 class='proficationalrightworkingexperienceh4'>${data.WorkingExperience}</h4>
+    `;
+    proficationalright.appendChild(proficationalrightworkingexperience);
+
+    let proficationalrightactivities = document.createElement('div');
+    proficationalrightactivities.classList.add('proficationalrightactivities');
+    proficationalrightactivities.innerHTML = ` <h1 class='proficationalrightactivitiesh1'>Activities</h1>
+    <h4 class='proficationalrightactivitiesh4'>${data.Activities}</h4>
+    `;
+    proficationalright.appendChild(proficationalrightactivities);
+
+    let proficationalrightinterest = document.createElement('div');
+    proficationalrightinterest.classList.add('proficationalrightinterest');
+    proficationalrightinterest.innerHTML = ` <h1 class='proficationalrightinteresth1'>Interest</h1>
+    <h4 class='proficationalrightinteresth4'>${data.interest}</h4>
+    `;
+    proficationalright.appendChild(proficationalrightinterest);
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
-    seventhdesign();
+    tenthdesign();
 });
 
 // download resume using html2pdf
