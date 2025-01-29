@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
             City: document.getElementById('City')?.value || "",
             Cnicno: document.getElementById('Cnicno')?.value || "",
             Skills: document.getElementById('Skills')?.value || "",
+            Skills2: document.getElementById('Skills2')?.value || "",
+            Matriculation: document.getElementById('Matriculation')?.value || "",
             intermediate: document.getElementById('intermediate')?.value || "",
             Objective: document.getElementById('Objective')?.value || "",
             WorkingExperience: document.getElementById('Working-Experience')?.value || "",
@@ -66,6 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 'Intermediate': formValues.intermediate,
                 'Objective': formValues.Objective,
                 'Working Experience': formValues.WorkingExperience,
+                'Matriculation': formValues.Matriculation,
+                'Skills2': formValues.Skills2,
                 'Activities': formValues.Activities,
                 'Language': formValues.Language,
                 'Interests': formValues.interest
@@ -720,6 +724,117 @@ function sixthdesign() {
 }
 // sixth resume design 6 completed
 // seventh resume design 7 and onclick function top
+function topgreen() {
+    window.location.href = 'resume.html';
+    seventhdesign();
+}
+function seventhdesign() {
+    let page = document.getElementById('page');
+    if (!page) {
+        console.error("Error: Element 'page' not found");
+        return;
+    }
+    let data = window.localStorage.getItem('data');
+    if (!data) {
+        console.error("Error: No data found in local storage.");
+        return;
+    }
+
+    data = JSON.parse(data);
+    console.log(data);
+
+    let topgreenmain = document.createElement('div');
+    topgreenmain.classList.add('topgreenmain');
+    topgreenmain.innerHTML = `  `;
+    page.appendChild(topgreenmain);
+
+    let topgreenfirst = document.createElement('div');
+    topgreenfirst.classList.add('topgreenfirst');
+    topgreenfirst.innerHTML = ` <h1 class='topgreenfirsth1'>personal resume</h1> `;
+    topgreenmain.appendChild(topgreenfirst);
+
+    let topgreensecond = document.createElement('div');
+    topgreensecond.classList.add('topgreensecond');
+    topgreensecond.innerHTML = `  `;
+    topgreenmain.appendChild(topgreensecond);
+
+    let topgreensecondimagebox = document.createElement('div');
+    topgreensecondimagebox.classList.add('topgreensecondimagebox');
+    topgreensecondimagebox.innerHTML = ` <img src="${data.imageFile}" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover;"> `;
+    topgreensecond.appendChild(topgreensecondimagebox);
+
+    let topgreensecondnamebox = document.createElement('div');
+    topgreensecondnamebox.classList.add('topgreensecondnamebox');
+    topgreensecondnamebox.innerHTML = ` <h1 class='topgreensecondnameboxh1'>${data.FirstName} ${data.LastName}</h1>
+    <h4 class='topgreensecondnameboxh4'>${data.Feild}</h4>
+     `;
+    topgreensecond.appendChild(topgreensecondnamebox);
+
+    let topgreensecondpersonalbox = document.createElement('div');
+    topgreensecondpersonalbox.classList.add('topgreensecondpersonalbox');
+    topgreensecondpersonalbox.innerHTML = `
+    <li class='topgreensecondpersonalboxh4'> <span class='dots'> Email</span>  ${data.Email}</li>
+    <li class='topgreensecondpersonalboxh4'> <span class='dots'> Phone</span>  ${data.Phone}</li>
+    <li class='topgreensecondpersonalboxh4'> <span class='dots'> Cnic No</span>  ${data.Cnicno}</li>
+    <li class='topgreensecondpersonalboxh4'> <span class='dots'> Address</span> ${data.Address}</li>
+    <li class='topgreensecondpersonalboxh4'> <span class='dots'>City </span> ${data.City}</li>
+    `;
+    topgreensecond.appendChild(topgreensecondpersonalbox);
+
+    let topgreenthird = document.createElement('div');
+    topgreenthird.classList.add('topgreenthird');
+    topgreenthird.innerHTML = `  `;
+    topgreenmain.appendChild(topgreenthird);
+
+
+    let topgreenthirdeaductaionbox = document.createElement('div');
+    topgreenthirdeaductaionbox.classList.add('topgreenthirdeaductaionbox');
+    topgreenthirdeaductaionbox.innerHTML = `  
+    <h1 class='topgreenmainheading1'>education</h1>
+    <h4 class='topgreenthirdeaductaionboxh4'>${data.Matriculation}</h4>
+    <h4 class='topgreenthirdeaductaionboxh4'>${data.intermediate}</h4>
+    `;
+    topgreenthird.appendChild(topgreenthirdeaductaionbox);
+
+    let topgreenfour = document.createElement('div');
+    topgreenfour.classList.add('topgreenfour');
+    topgreenfour.innerHTML = `  `;
+    topgreenmain.appendChild(topgreenfour);
+
+    let topgreenfourthexperience = document.createElement('div');
+    topgreenfourthexperience.classList.add('topgreenfourthexperience');
+    topgreenfourthexperience.innerHTML = `  
+    <h1 class='topgreenmainheading1'> working experience</h1>
+    <h4 class='topgreenfourthexperienceh4'>${data.WorkingExperience}</h4>
+    `;
+    topgreenfour.appendChild(topgreenfourthexperience);
+
+    let topgreenfive = document.createElement('div');
+    topgreenfive.classList.add('topgreenfive');
+    topgreenfive.innerHTML = `  `;
+    topgreenmain.appendChild(topgreenfive);
+
+    let topgreenfiveskills = document.createElement('div');
+    topgreenfiveskills.classList.add('topgreenfiveskills');
+    topgreenfiveskills.innerHTML = `  
+    <h1 class='topgreenmainheading2'> skills</h1>
+    <h4 class='topgreenfiveskillsh4'>${data.Skills} <br> ${data.Skills2}</h4>
+    `;
+    topgreenfive.appendChild(topgreenfiveskills);
+
+    let topgreensix = document.createElement('div');
+    topgreensix.classList.add('topgreensix');
+    topgreensix.innerHTML = `  `;
+    topgreenmain.appendChild(topgreensix);
+
+    let topgreensixobjectiveactivity = document.createElement('div');
+    topgreensixobjectiveactivity.classList.add('topgreensixobjectiveactivity');
+    topgreensixobjectiveactivity.innerHTML = `  
+    <h1 class='topgreenmainheading3'> objective</h1>
+    <p class='topgreensixobjectiveactivityp'>${data.Objective}</p> <p class='topgreensixobjectiveactivityp'>${data.Activities}</p>
+    `;
+    topgreensix.appendChild(topgreensixobjectiveactivity);
+}
 // seventh resume design 7 completed
 
 // eighth resume design 8 and onclick function topblack
@@ -909,7 +1024,7 @@ function ninthdesign() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    fifthdesign();
+    seventhdesign();
 });
 
 // download resume using html2pdf

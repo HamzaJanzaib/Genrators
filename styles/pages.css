@@ -217,7 +217,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: black;   
+    color: black;
     gap: 10px;
 }
 
@@ -257,10 +257,10 @@
     color: black;
     text-align: center;
     text-transform: uppercase;
-}  
+}
 
 /* Brown section heading styles */
-.brownheading{
+.brownheading {
     font-size: 20px;
     font-weight: 600;
     color: black;
@@ -270,7 +270,7 @@
 }
 
 /* Brown section h4 styles */
-.brownh4{
+.brownh4 {
     color: black;
     font-size: 14px;
     font-weight: 400;
@@ -278,7 +278,7 @@
 }
 
 /* Spacer element */
-.spacer{
+.spacer {
     width: 100%;
     height: 10%;
     position: relative;
@@ -287,31 +287,36 @@
 
 /* Mobile responsive styles for brown section */
 @media screen and (max-width: 480px) {
-    .spacer{
+    .spacer {
         font-size: 12px;
     }
-    .broentoph{
+
+    .broentoph {
         font-size: 20px;
     }
-    .line{
+
+    .line {
         top: 5%;
         font-size: 10px;
     }
-    .brownheading{
+
+    .brownheading {
         font-size: 12px;
         margin-bottom: 5p;
     }
-    .brownh4{
+
+    .brownh4 {
         font-size: 10px;
         margin-bottom: 5px;
     }
-    .paragraph{
+
+    .paragraph {
         font-size: 10px;
     }
 }
 
 /* Image box container */
-.image-box{
+.image-box {
     width: 100%;
     height: 100%;
     position: relative;
@@ -319,7 +324,7 @@
 }
 
 /* Image top section */
-.image-top{
+.image-top {
     width: 100%;
     height: 20%;
     position: relative;
@@ -329,7 +334,7 @@
 }
 
 /* Left section of image top */
-.image-top-left{
+.image-top-left {
     width: 30%;
     height: 100%;
     position: relative;
@@ -340,7 +345,7 @@
 }
 
 /* Image top right heading */
-.image-top-right-h4{
+.image-top-right-h4 {
     font-size: 30px;
     font-weight: 600;
     color: white;
@@ -353,7 +358,7 @@
 }
 
 /* Image box image container */
-.image-box-image-set{
+.image-box-image-set {
     width: 70%;
     height: 80%;
     position: relative;
@@ -362,25 +367,26 @@
 }
 
 /* Image styles */
-.image-box img{
+.image-box img {
     width: 100%;
     object-fit: cover;
-    height: 100%;  
+    height: 100%;
 }
 
 /* Mobile responsive styles for image section */
 @media screen and (max-width: 480px) {
-    .image-box-image-set{
+    .image-box-image-set {
         width: 80%;
         height: 60%;
     }
-    .image-top-right-h4{
+
+    .image-top-right-h4 {
         font-size: 20px;
     }
 }
 
 /* Right box container */
-.right-box{
+.right-box {
     width: 100%;
     height: 100%;
     position: relative;
@@ -389,7 +395,7 @@
 }
 
 /* Left section of right box */
-.right-left{
+.right-left {
     width: 60%;
     height: 100%;
     position: relative;
@@ -397,7 +403,7 @@
 }
 
 /* Right section of right box */
-.right-right{
+.right-right {
     width: 40%;
     height: 100%;
     position: relative;
@@ -406,7 +412,7 @@
 }
 
 /* Right section image container */
-.right-right-image{
+.right-right-image {
     margin: 20% auto;
     width: 60%;
     height: 60%;
@@ -415,7 +421,7 @@
 }
 
 /* Right section image styles */
-.right-right-image img{
+.right-right-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -423,7 +429,7 @@
 }
 
 /* Right section heading styles */
-.right-heading{
+.right-heading {
     font-size: 20px;
     font-weight: 600;
     color: black;
@@ -433,7 +439,7 @@
 }
 
 /* Decorative blur effect after right heading */
-.right-heading::after{
+.right-heading::after {
     content: "";
     width: 100%;
     height: 20px;
@@ -446,7 +452,7 @@
 }
 
 /* Right section h4 styles */
-.righth4{
+.righth4 {
     font-size: 14px;
     font-weight: 400;
     color: black;
@@ -454,7 +460,7 @@
 }
 
 /* Name box container */
-.name-box{
+.name-box {
     width: fit-content;
     height: 10%;
     margin: 5px 10%;
@@ -466,7 +472,7 @@
 }
 
 /* Right name styles */
-.right-name{
+.right-name {
     font-size: 20px;
     font-weight: 600;
     color: black;
@@ -475,7 +481,7 @@
 }
 
 /* Image top right styles */
-.image-top-right{
+.image-top-right {
     font-size: 20px;
     font-weight: 600;
     color: black;
@@ -485,7 +491,7 @@
 }
 
 /* Decorative blur effect after image top right */
-.image-top-right::after{
+.image-top-right::after {
     content: "";
     width: 100%;
     height: 20px;
@@ -498,7 +504,7 @@
 }
 
 /* Black box container */
-.black-box{
+.black-box {
     width: 100%;
     height: 15%;
     position: relative;
@@ -509,29 +515,34 @@
 
 /* Mobile responsive styles for various elements */
 @media screen and (max-width: 480px) {
-    .black-box{
+    .black-box {
         font-size: 10px;
     }
-    .right-heading{
+
+    .right-heading {
         font-size: 14px;
     }
-    .righth4{
+
+    .righth4 {
         font-size: 6px;
         font-weight: 900;
     }
-    .right-name{
+
+    .right-name {
         font-size: 10px;
     }
-    .image-top-right{
+
+    .image-top-right {
         font-size: 10px;
     }
-    .image-top-right::after{
+
+    .image-top-right::after {
         font-size: 10px;
     }
 }
 
 /* Green box container */
-.green{
+.green {
     width: 100%;
     height: 100%;
     position: relative;
@@ -540,7 +551,7 @@
 }
 
 /* Green box left section */
-.green-left{
+.green-left {
     width: 40%;
     height: 100%;
     position: relative;
@@ -551,7 +562,7 @@
 }
 
 /* Green box right section */
-.green-right{
+.green-right {
     width: 60%;
     height: 100%;
     position: relative;
@@ -560,7 +571,7 @@
 }
 
 /* Green box left top section */
-.green-left-top{
+.green-left-top {
     width: 100%;
     height: 40%;
     position: relative;
@@ -571,7 +582,7 @@
 }
 
 /* Green box left top image */
-.green-image{
+.green-image {
     width: 80%;
     height: 60%;
     position: relative;
@@ -580,7 +591,7 @@
 }
 
 /* Green box left bottom section */
-.green-left-bottom{
+.green-left-bottom {
     width: 100%;
     height: 60%;
     position: relative;
@@ -589,22 +600,24 @@
 }
 
 /* Green box left bottom h1 */
-.green-left-bottom-h1{
+.green-left-bottom-h1 {
     font-size: 20px;
     font-weight: 600;
     color: black;
     text-transform: uppercase;
     text-align: center;
 }
-.text-contaner{
+
+.text-contaner {
     width: 100%;
     height: 30%;
     position: relative;
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 /* Green box left bottom information contaner */
-.information-contaner{
+.information-contaner {
     width: 100%;
     height: 40%;
     position: relative;
@@ -613,7 +626,7 @@
 }
 
 /* Green box left bottom h1 */
-.information-contaner-h1{
+.information-contaner-h1 {
     font-size: 20px;
     font-weight: 800;
     color: black;
@@ -623,7 +636,7 @@
 }
 
 /* Green box left bottom h3 */
-.information-contaner-h3{
+.information-contaner-h3 {
     font-size: 14px;
     font-weight: 400;
     color: black;
@@ -632,14 +645,14 @@
 }
 
 /* Green box left bottom h3 span */
-.green-left-bottom-h3-span::after{
+.green-left-bottom-h3-span::after {
     content: ":";
     font-weight: 600;
     color: red;
 }
 
 /* Green box left bottom language contaner */
-.language-contaner{
+.language-contaner {
     width: 100%;
     height: 20%;
     position: relative;
@@ -648,7 +661,7 @@
 }
 
 /* Green box left bottom language contaner h1 */
-.language-contaner-h1{
+.language-contaner-h1 {
     font-size: 20px;
     font-weight: 600;
     color: black;
@@ -656,7 +669,7 @@
 }
 
 /* Green box left bottom language contaner h3 */
-.language-contaner-h3{
+.language-contaner-h3 {
     font-size: 14px;
     font-weight: 400;
     color: black;
@@ -664,7 +677,7 @@
 }
 
 /* Green box right heading */
-.green-right-heading{
+.green-right-heading {
     font-size: 20px;
     font-weight: 800;
     color: black;
@@ -673,10 +686,12 @@
     border-bottom: 2px solid black;
     position: relative;
 }
-.green-right-heading::after{
+
+.green-right-heading::after {
     content: ":";
 }
-.green-right-heading::before{
+
+.green-right-heading::before {
     content: "";
     width: 100%;
     height: 10%;
@@ -689,7 +704,7 @@
 }
 
 /* Green box right paragraph */
-.green-right-p{
+.green-right-p {
     font-size: 14px;
     font-weight: 400;
     color: black;
@@ -697,7 +712,7 @@
 }
 
 /* Green box right experience */
-.green-experience{
+.green-experience {
     width: 100%;
     height: 20%;
     position: relative;
@@ -706,7 +721,7 @@
 }
 
 /* Green box right activities */
-.green-activities{
+.green-activities {
     width: 100%;
     height: 20%;
     position: relative;
@@ -715,7 +730,7 @@
 }
 
 /* Green box right skills */
-.greenskills{
+.greenskills {
     width: 100%;
     height: 20%;
     position: relative;
@@ -724,14 +739,15 @@
 }
 
 /* Green box right interest */
-.green-interest{
+.green-interest {
     width: 100%;
     height: 20%;
     position: relative;
     overflow: hidden;
     margin-bottom: 10px;
 }
-.green-right-top-black{
+
+.green-right-top-black {
     width: 100%;
     height: 15%;
     position: relative;
@@ -739,7 +755,7 @@
 }
 
 /* Green box right top black h1 */
-.green-right-top-black-h1{
+.green-right-top-black-h1 {
     font-size: 25px;
     font-weight: 800;
     color: black;
@@ -747,50 +763,380 @@
     text-align: center;
     text-decoration: underline;
 }
+
 @media screen and (max-width: 480px) {
-    .green-right-top-black-h1{
+    .green-right-top-black-h1 {
         font-size: 12px;
     }
-    .green-right-heading{
+
+    .green-right-heading {
         font-size: 12px;
     }
-    .green-right-p{
+
+    .green-right-p {
         font-size: 8px;
         font-weight: 600;
     }
-    .green-right-top-black{
+
+    .green-right-top-black {
         height: 15%;
     }
-    .green-left-top{
+
+    .green-left-top {
         height: 30%;
     }
-    .green-image{
+
+    .green-image {
         width: 80%;
         height: 60%;
     }
-    .green-left-bottom{
+
+    .green-left-bottom {
         height: 60%;
     }
-    .green-left-bottom-h1{
+
+    .green-left-bottom-h1 {
         font-size: 15px;
     }
-    .information-contaner-p{
+
+    .information-contaner-p {
         font-size: 8px;
         font-weight: 600;
     }
-    .information-contaner-h1{
+
+    .information-contaner-h1 {
         font-size: 9px;
     }
-    .information-contaner-h3{
+
+    .information-contaner-h3 {
         font-size: 8px;
         font-weight: 600;
         margin-bottom: 0px;
     }
-    .language-contaner-h1{
+
+    .language-contaner-h1 {
         font-size: 12px;
     }
-    .language-contaner-h3{
+
+    .language-contaner-h3 {
         font-size: 8px;
         font-weight: 600;
+    }
+}
+
+.topgreenmain {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+}
+
+.topgreenfirst {
+    width: 100%;
+    height: 6%;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    color: rgb(4, 153, 121);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.topgreensecond {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(4, 153, 121);
+    color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+.topgreensecondimagebox {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topgreensecondnamebox {
+    width: 30%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.topgreensecondpersonalbox {
+    width: 45%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    padding: 0px 20px;
+}
+
+.topgreenthird {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    padding: 10px 40px;
+}
+
+.topgreenthirdeaductaionbox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-left: 2px dashed rgb(4, 153, 121);
+    padding: 10px 20px;
+}
+
+.topgreenmainheading1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(4, 153, 121);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    position: relative;
+    border-bottom: 2px solid rgb(4, 153, 121);
+}
+
+.topgreenmainheading1::before {
+    content: "E";
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(4, 153, 121);
+    position: absolute;
+    border-radius: 50%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -5.5%;
+}
+
+.topgreenthirdeaductaionboxh4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.topgreenfour {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    padding: 10px 40px;
+}
+
+.topgreenfourthexperience {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-left: 2px dashed rgb(4, 153, 121);
+    padding: 10px 20px;
+}
+
+.topgreenfive {
+    width: 100%;
+    height: 15%;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    padding: 10px 40px;
+}
+
+.topgreenfiveskills {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-left: 2px dashed rgb(4, 153, 121);
+    padding: 10px 20px;
+}
+
+.topgreenmainheading2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(4, 153, 121);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    position: relative;
+    border-bottom: 2px solid rgb(4, 153, 121);
+}
+
+.topgreenmainheading2::before {
+    content: "s";
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(4, 153, 121);
+    position: absolute;
+    border-radius: 50%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -5.5%;
+}
+
+.topgreenfiveskillsh4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.topgreensix {
+    width: 100%;
+    height: 18%;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    padding: 10px 40px;
+}
+
+.topgreensixobjectiveactivity {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-left: 2px dashed rgb(4, 153, 121);
+    padding: 10px 20px;
+}
+
+.topgreenmainheading3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(4, 153, 121);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    position: relative;
+    border-bottom: 2px solid rgb(4, 153, 121);
+}
+
+.topgreenmainheading3::before {
+    content: "D";
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(4, 153, 121);
+    position: absolute;
+    border-radius: 50%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -5.5%;
+}
+
+@media screen and (max-width: 480px) {
+    .topgreenfirsth1 {
+        font-size: 20px;
+    }
+
+    .topgreensecond {
+        padding: 0px 10px;
+    }
+
+    .topgreensecondnamebox {
+        font-size: 10px;
+        padding: 0px;
+    }
+
+    .topgreensecondnameboxh1 {
+        font-size: 10px;
+    }
+
+    .topgreensecondpersonalbox {
+        font-size: 10px;
+        padding: 0px;
+    }
+
+    .topgreensecondpersonalboxh4 {
+        font-size: 8px;
+        font-weight: 900;
+    }
+    .topgreenthirdeaductaionbox{
+        padding: 0px 10px ;
+    }
+    .topgreenmainheading1{
+        font-size: 14px;
+    }
+    .topgreenthirdeaductaionboxh4{
+        font-size: 10px;
+        margin-bottom: 0px;
+        font-weight: 900;
+    }
+    .topgreenmainheading1::before{
+        font-size: 10px;
+        width: 18px;
+        height: 18px;
+        left: -8%;
+    }
+    .topgreenfourthexperience{
+        padding: 0px 10px;
+    }
+    .topgreenfiveskills{
+        padding: 0px 10px;
+    }
+    .topgreenfiveskillsh4{
+        font-size: 10px;
+        font-weight: 900;
+        margin-bottom: 0px;
+    }
+    .topgreenmainheading2{
+        font-size: 14px;
+    }
+    .topgreenmainheading2::before{
+        font-size: 10px;
+        width: 18px;
+        height: 18px;
+        left: -8%;
+    }
+    .topgreensixobjectiveactivity{ 
+        padding: 0px 10px;
+    }
+    .topgreenmainheading3{
+        font-size: 14px;
+    }
+    .topgreenmainheading3::before{
+        font-size: 10px;
+        width: 18px;
+        height: 18px;
+        left: -8%;
     }
 }
