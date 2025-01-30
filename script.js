@@ -1183,7 +1183,7 @@ if (simpleCvBtn || brownCvBtn || imageCvBtn || rightCvBtn || greenCvBtn || blueC
     const urlParams = new URLSearchParams(window.location.search);
     const template = urlParams.get('template');
     console.log(template);
-
+    
     switch(template) {
         case 'first':
             firstdesign();
@@ -1226,7 +1226,7 @@ function dowloand() {
     html2pdf(document.querySelector("#page")).then(canvas => {
         let link = document.createElement("a");
         link.download = "your_cv.pdf";
-        link.href = canvas.toDataURL("image/jpg");
+        link.href = canvas.toDataURL("image/png");
         link.click();
     });
 }

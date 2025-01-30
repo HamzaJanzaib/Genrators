@@ -414,10 +414,12 @@
 /* Right section image container */
 .right-right-image {
     margin: 20% auto;
-    width: 60%;
-    height: 60%;
+    width: 200px;
+    height: 200px;
     position: relative;
+    background-color: black;
     overflow: hidden;
+    border-radius: 50%;
 }
 
 /* Right section image styles */
@@ -425,7 +427,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
 }
 
 /* Right section heading styles */
