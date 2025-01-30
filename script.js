@@ -1,6 +1,5 @@
 
 
-
 // form dom content loaded function and form submit event listener
 document.addEventListener("DOMContentLoaded", function () {
     let form = document.getElementById('form');
@@ -100,12 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//  switch to first design page and call firstdesign function
-function simplecv() {
-    window.location.href = 'resume.html';
-    firstdesign()
-}
-
 // first  resume design 
 function firstdesign() {
     let page = document.getElementById('page');
@@ -186,11 +179,6 @@ function firstdesign() {
 // first design completed
 
 // secound design template 2 and onclick function brown
-function Brown() {
-    window.location.href = 'resume.html';
-    secounddesign();
-}
-// secounddesign function   
 function secounddesign() {
     let page = document.getElementById('page');
     if (!page) {
@@ -290,13 +278,6 @@ function secounddesign() {
 // secound design completed
 
 // third resume design 3 and onclick function image
-
-function image() {
-    window.location.href = 'resume.html';
-    thirddesign();
-}
-
-// image resume design 3
 function thirddesign() {
     let page = document.getElementById('page');
     if (!page) {
@@ -391,10 +372,6 @@ function thirddesign() {
 // image resume design 3 completed
 
 // fourth resume design 4 and onclick function right
-function right() {
-    window.location.href = 'resume.html';
-    fourthdesign();
-}
 function fourthdesign() {
     let page = document.getElementById('page');
     if (!page) {
@@ -510,10 +487,6 @@ function fourthdesign() {
 // fourth resume design 4 completed
 
 // fifth resume design 5 and onclick function green
-function green() {
-    window.location.href = 'resume.html';
-    fifthdesign();
-}
 function fifthdesign() {
     let page = document.getElementById('page');
     if (!page) {
@@ -628,12 +601,6 @@ function fifthdesign() {
 
 // sixth resume design 6 and onclick function blue
 
-function blue() {
-    window.location.href = 'resume.html';
-    sixthdesign();
-}
-
-// sixth resume design 6
 function sixthdesign() {
     let page = document.getElementById('page');
     if (!page) {
@@ -723,11 +690,8 @@ function sixthdesign() {
 
 }
 // sixth resume design 6 completed
+
 // seventh resume design 7 and onclick function top
-function topgreen() {
-    window.location.href = 'resume.html';
-    seventhdesign();
-}
 function seventhdesign() {
     let page = document.getElementById('page');
     if (!page) {
@@ -838,11 +802,7 @@ function seventhdesign() {
 // seventh resume design 7 completed
 
 // eighth resume design 8 and onclick function topblack
-function topblack() {
-    window.location.href = 'resume.html';
-    eighthdesign();
-}
-// black resume design 8    
+
 function eighthdesign() {
     let page = document.getElementById('page');
     if (!page) {
@@ -925,11 +885,7 @@ function eighthdesign() {
 // eighth resume design 8 completed
 
 // ninth resume design 9 and onclick function grid
-function grid() {
-    window.location.href = 'resume.html';
-    ninthdesign();
-}
-// ninth resume design 9
+
 function ninthdesign() {
     let page = document.getElementById('page');
     if (!page) {
@@ -1025,11 +981,6 @@ function ninthdesign() {
 // ninth resume design 9 completed
 
 // tenth resume design 10 and onclick function topblue
-function professional() {
-    window.location.href = 'resume.html';
-    tenthdesign();
-}
-// tenth resume design 10
 function tenthdesign() {
     let page = document.getElementById('page');
     if (!page) {
@@ -1052,7 +1003,7 @@ function tenthdesign() {
     proficationalmain.innerHTML = `  `;
     page.appendChild(proficationalmain);
 
-    let proficationalleft    = document.createElement('div');
+    let proficationalleft = document.createElement('div');
     proficationalleft.classList.add('proficationalleft');
     proficationalleft.innerHTML = `  `;
     proficationalmain.appendChild(proficationalleft);
@@ -1115,7 +1066,7 @@ function tenthdesign() {
     proficationalright.classList.add('proficationalright');
     proficationalright.innerHTML = `  `;
     proficationalmain.appendChild(proficationalright);
-    
+
     let proficationalrightblanck = document.createElement('div');
     proficationalrightblanck.classList.add('proficationalrightblanck');
     proficationalrightblanck.innerHTML = `  `;
@@ -1155,12 +1106,120 @@ function tenthdesign() {
     <h4 class='proficationalrightinteresth4'>${data.interest}</h4>
     `;
     proficationalright.appendChild(proficationalrightinterest);
+
+    console.log("Resume generated successfully.");
+}
+// tenth resume design 10 completed
+
+
+
+// Check if we're on the templates page or resume page
+// Get all CV template buttons
+const simpleCvBtn = document.getElementById('simple-cv-btn');
+const brownCvBtn = document.getElementById('brown-cv-btn');
+const imageCvBtn = document.getElementById('image-cv-btn');
+const rightCvBtn = document.getElementById('right-cv-btn');
+const greenCvBtn = document.getElementById('green-cv-btn');
+const blueCvBtn = document.getElementById('blue-cv-btn');
+const topgreenCvBtn = document.getElementById('topgreen-cv-btn');
+const topblackCvBtn = document.getElementById('topblack-cv-btn');
+const gridCvBtn = document.getElementById('grid-cv-btn');
+const professionalCvBtn = document.getElementById('professional-cv-btn');
+
+
+if (simpleCvBtn || brownCvBtn || imageCvBtn || rightCvBtn || greenCvBtn || blueCvBtn || topgreenCvBtn || topblackCvBtn || gridCvBtn || professionalCvBtn) {
+    // On templates page - add click handlers to buttons
+    if (simpleCvBtn) {
+        simpleCvBtn.addEventListener('click', function() {
+            window.location.href = 'resume.html?template=first';
+        });
+    }
+    if (brownCvBtn) {
+        brownCvBtn.addEventListener('click', function() {
+            window.location.href = 'resume.html?template=second';
+        });
+    }
+    if (imageCvBtn) {
+        imageCvBtn.addEventListener('click', function() {
+            window.location.href = 'resume.html?template=third';
+        });
+    }
+    if (rightCvBtn) {
+        rightCvBtn.addEventListener('click', function() {
+            window.location.href = 'resume.html?template=fourth';
+        });
+    }
+    if (greenCvBtn) {
+        greenCvBtn.addEventListener('click', function() {
+            window.location.href = 'resume.html?template=fifth';
+        });
+    }
+    if (blueCvBtn) {
+        blueCvBtn.addEventListener('click', function() {
+            window.location.href = 'resume.html?template=sixth';
+        });
+    }
+    if (topgreenCvBtn) {
+        topgreenCvBtn.addEventListener('click', function() {
+            window.location.href = 'resume.html?template=seventh';
+        });
+    }
+    if (topblackCvBtn) {
+        topblackCvBtn.addEventListener('click', function() {
+            window.location.href = 'resume.html?template=eighth';
+        });
+    }
+    if (gridCvBtn) {
+        gridCvBtn.addEventListener('click', function() {
+            window.location.href = 'resume.html?template=ninth';
+        });
+    }
+    if (professionalCvBtn) {
+        professionalCvBtn.addEventListener('click', function() {
+            window.location.href = 'resume.html?template=tenth';
+        });
+    }
+} else {
+    const urlParams = new URLSearchParams(window.location.search);
+    const template = urlParams.get('template');
+    console.log(template);
+
+    switch(template) {
+        case 'first':
+            firstdesign();
+            break;
+        case 'second':
+            secounddesign();
+            break;
+        case 'third':
+            thirddesign();
+            break;
+        case 'fourth':
+            fourthdesign();
+            break;
+        case 'fifth':
+            fifthdesign();
+            break;
+        case 'sixth':
+            sixthdesign();
+            break;
+        case 'seventh':
+            seventhdesign();
+            break;
+        case 'eighth':
+            eighthdesign();
+            break;
+        case 'ninth':
+            ninthdesign();
+            break;
+        case 'tenth':
+            tenthdesign();
+            break;
+        default:
+            firstdesign(); // Default to first design if no template specified
+    }
 }
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    tenthdesign();
-});
 
 // download resume using html2pdf
 function dowloand() {
